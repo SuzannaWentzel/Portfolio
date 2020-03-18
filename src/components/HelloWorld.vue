@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <img src="..\assets\undraw_under_construction_46pa.png"/>
+    <img src="../../public/images/undraw_under_construction_46pa.png" />
     <h3>{{ msg }}</h3>
     <a href="https://norway.suzannawentzel.nl">Click here to visit the blog about my exchange to norway</a>
     <!-- <p>
