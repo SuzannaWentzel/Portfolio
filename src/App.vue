@@ -8,13 +8,40 @@
   </div>
 </template>
 
+<script>
+import { BootstrapVue } from 'bootstrap-vue';
+import Vue from 'vue';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue);
+
+export default {
+  name: "App"
+}
+</script>
+
 <style>
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
 }
 
 #nav {
