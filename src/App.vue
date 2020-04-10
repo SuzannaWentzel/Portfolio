@@ -1,5 +1,15 @@
 <template>
   <div id="app">
+    <div class="nav">
+      <span>
+        <img src="../public/images/logo.png" class="logo" />
+        uzanna Wentzel
+      </span>
+      <!--<p>Projects</p>-->
+      <!--<p>Research</p>-->
+      <!--<p>Achievements</p>-->
+      <!--<p>Contact</p>-->
+    </div>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -21,12 +31,43 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  @media only screen and (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media only screen and (min-width: 576px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<style lang="scss" scoped>
+
 body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -40,20 +81,38 @@ body {
   left: 0;
   padding: 0;
   width: 100%;
-  overflow: hidden;
   height: 100%;
 }
 
-#nav {
-  padding: 30px;
+.logo {
+  width: 50px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+@media only screen and (max-width: 576px) {
+
+}
+@media only screen and (min-width: 576px) {
+
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 992px) {
+  .nav {
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p {
+      margin: 0;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+
 }
 </style>
