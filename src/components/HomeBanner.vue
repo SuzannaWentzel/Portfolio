@@ -57,7 +57,7 @@
                 nameDelay: 10000,
                 typeArrayIndex: 0,
                 charIndex: 0,
-                paused: true,       // TODO: set to false bf pushing !!
+                paused: false,       // TODO: set to false bf pushing !!
                 erasing: false
             }
         },
