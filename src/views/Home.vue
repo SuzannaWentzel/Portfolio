@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <div class="banner"><HomeBanner /></div>
+    <div class="banner"><AspirationBanner /></div>
+    <div class="banner"><TraitsBanner /></div>
+    <div class="banner"><InterestsBanner /></div>
     <div class="disclaimer"><p>This is a work in progress, please don't mind the mess. Do you want to checkout the
       <a href="https://norway.suzannawentzel.nl">blog</a> about my stay in Norway?</p>
     </div>
@@ -9,12 +12,14 @@
 
 <script>
 // @ is an alias to /src
-import HomeBanner from '../components/HomeBanner'
-
+import HomeBanner from '../components/home/HomeBanner';
+import AspirationBanner from '../components/home/AspirationBanner';
+import TraitsBanner from '../components/home/TraitsBanner';
+import InterestsBanner from '../components/home/InterestsBanner';
 
 export default {
   name: 'Home',
-  components: {HomeBanner}
+  components: {InterestsBanner, TraitsBanner, AspirationBanner, HomeBanner}
 }
 </script>
 
@@ -23,13 +28,17 @@ export default {
 <style lang="scss" scoped>
 .home {
   width: 100%;
-  height: 100%;
+  background-image: url('../../public/images/path_v3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+  text-shadow: 0 0 0.5rem #fff;
 }
 
 @media only screen and (max-width: 576px) {
   .banner {
-    background-color: rgba(0, 0, 0, 0.8);
-    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    height: 100vh;
   }
 
   .disclaimer {
@@ -38,7 +47,7 @@ export default {
 }
 @media only screen and (min-width: 576px) {
   .banner {
-    background-color: rgba(0, 0, 0, 0.8);
+    /*background-color: rgba(0, 0, 0, 0.8);*/
     height: 100%;
   }
 
@@ -53,13 +62,13 @@ export default {
 }
 @media only screen and (min-width: 992px) {
   .banner {
-    position: absolute;
+    /*position: absolute;
     width: 80%;
     height: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);*/
   }
 
   .disclaimer {
@@ -71,6 +80,10 @@ export default {
 }
 @media only screen and (min-width: 1200px) {
 
+}
+
+.banner {
+  height: 100vh;
 }
 
 .disclaimer {

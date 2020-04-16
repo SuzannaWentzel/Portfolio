@@ -14,7 +14,7 @@
 					<p class="pause" v-if="paused" @click="resumeTyping()"><i class="fas fa-play"></i></p>
 				</div>
 			</div>
-			<div class="about-me row">
+
 				<!--<div class="col-lg-4">-->
 					<!--<p>5 traits that describe me:</p>-->
 					<!--<p class="list-item">Curious</p>-->
@@ -23,13 +23,7 @@
 					<!--<p class="list-item">Responsible</p>-->
 					<!--<p class="list-item">Caring</p>-->
 				<!--</div>-->
-				<div class="col-lg-6 col-sm-12 aspiration">
-					<img src="../../public/images/aspirations.png" />
-				</div>
-				<div class="col-lg-6 col-sm-12 aspiration">
-					<h2>What will I become?</h2>
-					<p>Not sure! The ideas here are what linger in my head, but everything can change! I still have studies to finish and I already have a very interesting job, who knows?</p>
-				</div>
+
 				<!--<div class=col-lg-4>-->
 					<!--<p>What I like & interests:</p>-->
 					<!--<p class="list-item">Web development <br>(Frontend, backend & connection)</p>-->
@@ -38,7 +32,11 @@
 					<!--<p class="list-item">Natural language/speech processing</p>-->
 					<!--<p class="list-item">Affective computing</p>-->
 				<!--</div>-->
-			</div>
+
+		</div>
+		<div class="about-me" v-scroll-to="'#aspiration-banner'">
+			<p>Read more about me </p>
+			<i class="fas fa-angle-double-down"></i>
 		</div>
 	</div>
 </template>
@@ -50,7 +48,7 @@
             return {
                 typeValue: '',
                 typeStatus: false,
-                typeArray: ["a Developer", "an Engineer", "a Learner", "a creator", "a Drummer", "a Pianist", "a Gardener", "Suzanna"],
+                typeArray: ["a developer", "an engineer", "a learner", "a creator", "a drummer", "a pianist", "a gardener", "Suzanna"],
                 typeSpeed: 80,
                 erasingSpeed: 50,
                 newTextDelay: 3000,
@@ -125,14 +123,92 @@
 
 <style scoped lang="scss">
 	@keyframes cursorBlink {
-		49% { background-color: white; }
+		49% { background-color: black; }
 		50% { background-color: transparent; }
 		99% { background-color: transparent; }
+	}
+
+	i {
+		color: rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+
+		&:hover {
+			color: rgba(0, 0, 0, 0.4);
+		}
 	}
 
 	.home-banner {
 		width: 100%;
 		height: 100%;
+		position: relative;
+
+		.about-me {
+			position: absolute;
+			cursor: pointer;
+			bottom: 5%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			&:hover {
+				color: var(--dark);
+
+				i {
+					color: rgba(0, 0, 0, 0.4);
+				}
+			}
+
+			i {
+				font-size: 2rem;
+			}
+		}
+
+		.intro {
+			height: 100%;
+			padding-top: 3rem;
+			box-sizing: border-box;
+			margin-bottom: 3rem;
+
+			& h1 {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+
+				&.right {
+					right: 0.5rem;
+				}
+
+				&.left {
+					left: 0.5rem;
+				}
+
+				& .cursor {
+					display: inline-block;
+					margin-left: 0.5rem;
+					width: 2px;
+					background-color: black;
+					animation: cursorBlink 1s infinite;
+				}
+
+				& .cursor.typing {
+					animation: none;
+				}
+
+			}
+
+			& .text-align-right {
+				text-align: right;
+			}
+
+			& .text-align-left {
+				text-align: left;
+			}
+
+			.pause {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-40%);
+			}
+		}
 	}
 
 	.container-fluid {
@@ -165,20 +241,6 @@
 			right: 10%;
 			font-size: 1rem;
 		}
-
-		.about-me {
-			.aspiration {
-				& img {
-					width: 50%;
-					margin-bottom: 2rem;
-				}
-				
-				h2 {
-					text-align: center;
-					margin-bottom: 0.7rem;
-				}
-			}
-		}
 	}
 	@media only screen and (min-width: 576px) {
 		h2 {
@@ -187,7 +249,7 @@
 		}
 
 		.cursor{
-			height: 2.5rem;
+			height: 1.9rem;
 		}
 
 		.intro {
@@ -198,22 +260,11 @@
 			font-size: 1.5rem;
 			right: 10%;
 		}
-
-		.about-me {
-			.aspiration {
-				& img {
-					width: 50%;
-					margin-bottom: 3rem;
-				}
-
-				& p {
-					margin-bottom: 3rem;
-				}
-			}
-		}
 	}
 	@media only screen and (min-width: 768px) {
-
+		.cursor {
+			height: 2.9rem;
+		}
 	}
 	@media only screen and (min-width: 992px) {
 		.intro {
@@ -224,103 +275,10 @@
 		.pause {
 			right: 15%;
 		}
-
-		.about-me {
-			.aspiration {
-				& img {
-					margin-top: -20%;
-					margin-bottom: 0;
-					width: 80%;
-				}
-
-				& p {
-					text-align: left;
-					padding-right: 3rem;
-					margin-bottom: 0;
-				}
-
-				& h2 {
-					text-align: left;
-					margin-bottom: 1.2rem;
-				}
-			}
-		}
 	}
 	@media only screen and (min-width: 1200px){
       .pause {
          right: 20%;
       }
-
-		.about-me {
-			.aspiration{
-				& p {
-					padding-right: 7rem;
-				}
-			}
-		}
 	}
-
-	.intro {
-		padding-top: 3rem;
-		box-sizing: border-box;
-		color: white;
-		margin-bottom: 3rem;
-
-		& h1 {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-
-			&.right {
-				right: 0.5rem;
-			}
-
-			&.left {
-				left: 0.5rem;
-			}
-
-			& .typed-text {
-				color: lightblue;
-			}
-
-			& .cursor {
-				display: inline-block;
-				margin-left: 0.5rem;
-				width: 2px;
-				background-color: white;
-				animation: cursorBlink 1s infinite;
-			}
-
-			& .cursor.typing {
-				animation: none;
-			}
-
-		}
-
-		& .text-align-right {
-			text-align: right;
-		}
-
-		& .text-align-left {
-			text-align: left;
-		}
-	}
-
-	.pause {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-40%);
-		color: rgba(255, 255, 255, 0.2);
-		cursor: pointer;
-
-		&:hover{
-			color: rgba(255, 255, 255, 0.3);
-		}
-	}
-
-	.about-me {
-		color: white;
-	}
-
-
 </style>

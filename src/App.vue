@@ -2,29 +2,42 @@
   <div id="app">
     <div class="nav">
       <span>
-        <img src="../public/images/logo.png" class="logo" />
-        uzanna Wentzel
+        <img src="../public/images/full_logo.png" class="logo" />
       </span>
+      <!--<p>Achievements</p>-->
       <!--<p>Projects</p>-->
       <!--<p>Research</p>-->
-      <!--<p>Achievements</p>-->
       <!--<p>Contact</p>-->
     </div>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view/>
+    <router-view class="content"/>
   </div>
 </template>
 
 <script>
 import { BootstrapVue } from 'bootstrap-vue';
 import Vue from 'vue';
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+import * as VueScrollTo from 'vue-scrollto';
 
 Vue.use(BootstrapVue);
+Vue.use(VueScrollTo, {
+  container: "body",
+  duration: 500,
+  easing: "ease",
+  offset: 0,
+  force: true,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
+});
 
 export default {
   name: "App"
@@ -32,6 +45,19 @@ export default {
 </script>
 
 <style lang="scss">
+  :root {
+    --primary: #85AA82;
+    --orange: #F4A153;
+    --red: #CC403A;
+    --dark: #254844;
+    --light: #F1E1B4;
+  }
+
+  body {
+    /*background-color: var(--light);*/
+    color: black;
+  }
+
   @media only screen and (max-width: 576px) {
     h1 {
       font-size: 1.5rem;
@@ -48,7 +74,8 @@ export default {
 
   @media only screen and (min-width: 576px) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
     h2 {
@@ -58,6 +85,15 @@ export default {
     p {
       font-size: 1rem;
     }
+  }
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+
   }
 </style>
 
@@ -76,16 +112,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   top: 0;
   left: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+
+  .nav {
+    z-index: 10;
+  }
 }
 
 .logo {
-  width: 50px;
+  height: 65px;
+}
+
+.content {
+  top: 0;
+  position: absolute;
 }
 
 
