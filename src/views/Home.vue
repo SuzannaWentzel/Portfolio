@@ -24,7 +24,6 @@ export default {
 </script>
 
 
-
 <style lang="scss" scoped>
 .home {
   width: 100%;
@@ -32,7 +31,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   /*background-position: center;*/
-  text-shadow: 0 0 0.5rem #fff;
+  /*text-shadow: 0 0 0.5rem #fff;*/
 }
 
 @media only screen and (max-width: 576px) {

@@ -53,6 +53,11 @@ export default {
     --light: #F1E1B4;
   }
 
+  p, h1, h2, h3, h4, h5, h6 {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.1rem 0.5rem;
+  }
+
   body {
     /*background-color: var(--light);*/
     color: black;
@@ -120,6 +125,9 @@ body {
 
   .nav {
     z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 }
 
@@ -145,7 +153,7 @@ body {
 @media only screen and (min-width: 992px) {
   .nav {
     width: 60%;
-    margin: auto;
+    margin-left: 20%;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;

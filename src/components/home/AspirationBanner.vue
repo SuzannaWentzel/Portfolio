@@ -1,12 +1,13 @@
 <template>
 	<div id="aspiration-banner" class="aspiration-banner container-fluid">
+		<img src="../../../public/images/splatter_2.png" class="splatter"/>
 		<div class="row mx-0">
 			<div class="col-lg-6 col-sm-12 aspiration">
 				<img src="../../../public/images/aspirations_v2.png" />
 			</div>
 			<div class="col-lg-6 col-sm-12 px-3 aspiration">
 				<h2>What will I become?</h2>
-				<p>Not sure! The ideas here are what linger in my head, but everything can change! I still have studies to finish and I already have a very interesting job, who knows?</p>
+				<p>Not sure! These ideas are what linger in my head, but everything can change! I still have studies to finish and I already have a very interesting job, who knows?</p>
 			</div>
 		</div>
 	</div>
@@ -22,6 +23,7 @@
 	.aspiration-banner {
 		width: 100%;
 		height: 100%;
+		position: relative;
 	}
 
 	.row {
@@ -82,6 +84,14 @@
 				text-align: left;
 				margin-bottom: 1.2rem;
 			}
+		}
+
+		.splatter {
+			height: 98%;
+			position: absolute;
+			top: 2%;
+			left: -10%;
+			z-index: -1;
 		}
 	}
 

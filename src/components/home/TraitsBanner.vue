@@ -1,8 +1,9 @@
 <template>
 	<div id="traits" class="traits-banner container-fluid">
+		<img src="../../../public/images/splatter_3.png" class="splatter"/>
 		<div class="row">
 			<div class="col-lg-8 col-sm-12">
-				<img src="../../../public/images/traits.png">
+				<img class="mindmap" src="../../../public/images/traits.png">
 			</div>
 		</div>
 	</div>
@@ -15,7 +16,7 @@
 </script>
 
 <style scoped lang="scss">
-	img {
+	.mindmap {
 		width: 70%;
 		max-width: 575px;
 	}
@@ -34,5 +35,16 @@
 	.traits-banner {
 		height: 100%;
 		position: relative;
+		overflow-x: hidden;
+
 	}
+
+	.splatter {
+		height: 98%;
+		position: absolute;
+		top: 2%;
+		right: -30%;
+		z-index: -1;
+	}
+
 </style>

@@ -1,9 +1,10 @@
 <template>
 	<div id="interests" class="container-fluid">
+		<img src="../../../public/images/splatter_4.png" class="splatter"/>
 		<div class="row">
 			<div class="col-lg-4 col-sm-0"></div>
 			<div class="col-lg-8 col-sm-12">
-				<img src="../../../public/images/interests.png">
+				<img class="mindmap" src="../../../public/images/interests.png">
 			</div>
 		</div>
 	</div>
@@ -16,7 +17,7 @@
 </script>
 
 <style scoped lang="scss">
-	img {
+	.mindmap {
 		width: 70%;
 		max-width: 575px;
 	}
@@ -35,5 +36,14 @@
 	#interests {
 		height: 100%;
 		position: relative;
+		overflow: hidden;
+	}
+
+	.splatter {
+		height: 98%;
+		position: absolute;
+		bottom: -10%;
+		left: -10%;
+		z-index: -1;
 	}
 </style>
