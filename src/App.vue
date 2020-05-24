@@ -140,6 +140,14 @@ body {
   position: absolute;
 }
 
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 0.25rem 0;
+  text-align: center;
+  bottom: 0;
+}
+
 
 @media only screen and (max-width: 576px) {
 

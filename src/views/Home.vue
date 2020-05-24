@@ -7,6 +7,7 @@
     <div class="disclaimer"><p>This is a work in progress, please don't mind the mess. Do you want to checkout the
       <a href="https://norway.suzannawentzel.nl">blog</a> about my stay in Norway?</p>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -16,10 +17,11 @@ import HomeBanner from '../components/home/HomeBanner';
 import AspirationBanner from '../components/home/AspirationBanner';
 import TraitsBanner from '../components/home/TraitsBanner';
 import InterestsBanner from '../components/home/InterestsBanner';
+import Footer from '../components/Footer'
 
 export default {
   name: 'Home',
-  components: {InterestsBanner, TraitsBanner, AspirationBanner, HomeBanner}
+  components: {InterestsBanner, TraitsBanner, AspirationBanner, HomeBanner, Footer}
 }
 </script>
 
