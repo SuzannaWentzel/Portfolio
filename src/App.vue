@@ -1,19 +1,18 @@
 <template>
   <div id="app">
     <div class="nav">
-      <span>
+      <router-link to="/">
         <img src="../public/images/full_logo.png" class="logo" />
-      </span>
+      </router-link>
+      <h5><router-link to="/projects">Projects</router-link></h5>
       <!--<p>Achievements</p>-->
       <!--<p>Projects</p>-->
       <!--<p>Research</p>-->
       <!--<p>Contact</p>-->
     </div>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view class="content"/>
+    <div class="content">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -55,6 +54,7 @@ export default {
 
   p, h1, h2, h3, h4, h5, h6 {
     background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
     padding: 0.1rem 0.5rem;
   }
 
@@ -121,13 +121,12 @@ body {
   left: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 
   .nav {
     z-index: 10;
     position: fixed;
     top: 0;
-    width: 100%;
   }
 }
 
@@ -138,18 +137,34 @@ body {
 .content {
   top: 0;
   position: absolute;
-}
-
-.footer {
-  position: relative;
+  height: auto;
   width: 100%;
-  padding: 0.25rem 0;
-  text-align: center;
-  bottom: 0;
 }
-
 
 @media only screen and (max-width: 576px) {
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+
+    & h5 {
+      margin-left: 2rem;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.2rem;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      & a {
+        color: black;
+
+        &:hover {
+          color: var(--dark)
+        }
+      }
+    }
+  }
 
 }
 @media only screen and (min-width: 576px) {
@@ -164,11 +179,24 @@ body {
     margin-left: 20%;
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: left;
+    align-items: flex-end;
 
-    & p {
-      margin: 0;
+    & h5 {
+      margin-left: 2rem;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.2rem;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      & a {
+        color: black;
+
+        &:hover {
+          color: var(--dark)
+        }
+      }
     }
   }
 }
