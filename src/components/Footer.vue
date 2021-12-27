@@ -18,5 +18,6 @@
 		margin-bottom: 0;
 		background-color: var(--dark);
 		color: white;
+		border-radius: 0px;
 	}
 </style>

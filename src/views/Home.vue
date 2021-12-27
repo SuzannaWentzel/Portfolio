@@ -37,51 +37,37 @@ export default {
 }
 
 @media only screen and (max-width: 576px) {
-  .banner {
-    /*background-color: rgba(0, 0, 0, 0.8);*/
-    height: 100vh;
-  }
-
   .disclaimer {
-    margin-top: 1.5rem;
+    bottom: 0.5rem;
+    position: absolute;
   }
 }
 @media only screen and (min-width: 576px) {
-  .banner {
-    /*background-color: rgba(0, 0, 0, 0.8);*/
-    height: 100%;
-  }
-
   .disclaimer {
-    margin-top: 1.5rem;
+    bottom: 0.75rem;
+    position: absolute;
   }
 }
+
 @media only screen and (min-width: 768px) {
-
-
-
-}
-@media only screen and (min-width: 992px) {
-  .banner {
-    /*position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);*/
-  }
-
   .disclaimer {
     right: 0;
-    bottom: 0;
+    bottom: 0.75rem;
     position: absolute;
     text-align: right;
   }
 }
-@media only screen and (min-width: 1200px) {
 
+@media only screen and (min-width: 992px) {
+  .disclaimer {
+    right: 0;
+    bottom: 0.75rem;
+    position: absolute;
+    text-align: right;
+  }
 }
+
+@media only screen and (min-width: 1200px) {}
 
 .banner {
   height: 100vh;

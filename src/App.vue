@@ -52,10 +52,11 @@ export default {
     --light: #F1E1B4;
   }
 
-  p, h1, h2, h3, h4, h5, h6 {
-    background-color: rgba(255, 255, 255, 0.3);
+  p, header, h2, h3, h4, h5, h6 {
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
     padding: 0.1rem 0.5rem;
+    border-radius: 3px;
   }
 
   body {
@@ -64,7 +65,7 @@ export default {
   }
 
   @media only screen and (max-width: 576px) {
-    h1 {
+    h1, header {
       font-size: 1.5rem;
     }
 
@@ -78,7 +79,7 @@ export default {
   }
 
   @media only screen and (min-width: 576px) {
-    h1 {
+    h1, header {
       font-size: 2rem;
       font-weight: bold;
     }
@@ -93,7 +94,7 @@ export default {
   }
 
   @media only screen and (min-width: 768px) {
-    h1 {
+    h1, header {
       font-size: 3rem;
     }
   }
@@ -147,6 +148,8 @@ body {
     display: flex;
     justify-content: left;
     align-items: flex-end;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
 
     & h5 {
       margin-left: 2rem;
@@ -165,14 +168,38 @@ body {
       }
     }
   }
-
 }
+
 @media only screen and (min-width: 576px) {
+  .nav {
+    width: 100%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
 
-}
-@media only screen and (min-width: 768px) {
+    & h5 {
+      margin-left: 2rem;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.2rem;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
 
+      & a {
+        color: black;
+
+        &:hover {
+          color: var(--dark)
+        }
+      }
+    }
+  }
 }
+
+@media only screen and (min-width: 768px) { }
+
 @media only screen and (min-width: 992px) {
   .nav {
     width: 60%;
@@ -200,7 +227,6 @@ body {
     }
   }
 }
-@media only screen and (min-width: 1200px) {
 
-}
+@media only screen and (min-width: 1200px) { }
 </style>

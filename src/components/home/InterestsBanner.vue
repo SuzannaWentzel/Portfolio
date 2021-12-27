@@ -1,9 +1,9 @@
 <template>
 	<div id="interests" class="container-fluid">
 		<img src="../../../public/images/splatter_4.png" class="splatter"/>
-		<div class="row">
-			<div class="col-lg-4 col-sm-0"></div>
-			<div class="col-lg-8 col-sm-12">
+		<div class="row align-items-center">
+			<div class="col-0 col-lg-4"></div>
+			<div class="col-12 col-lg-8">
 				<img class="mindmap" src="../../../public/images/interests.png">
 			</div>
 		</div>
@@ -23,13 +23,7 @@
 	}
 
 	.row {
-		position: absolute;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		transform: translateY(-50%);
+		height: 100%;
 		width: 100%;
 	}
 
@@ -43,7 +37,7 @@
 		height: 98%;
 		position: absolute;
 		bottom: -10%;
-		left: -10%;
+		right: 10%;
 		z-index: -1;
 	}
 </style>

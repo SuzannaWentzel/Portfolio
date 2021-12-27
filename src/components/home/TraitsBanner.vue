@@ -1,8 +1,8 @@
 <template>
 	<div id="traits" class="traits-banner container-fluid">
 		<img src="../../../public/images/splatter_3.png" class="splatter"/>
-		<div class="row">
-			<div class="col-lg-8 col-sm-12">
+		<div class="row align-items-center">
+			<div class="col-12 col-lg-8">
 				<img class="mindmap" src="../../../public/images/traits.png">
 			</div>
 		</div>
@@ -22,28 +22,21 @@
 	}
 
 	.row {
-		position: absolute;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		transform: translateY(-50%);
 		width: 100%;
+		height: 100%;
 	}
 
 	.traits-banner {
 		height: 100%;
 		position: relative;
 		overflow-x: hidden;
-
 	}
 
 	.splatter {
 		height: 98%;
 		position: absolute;
 		top: 2%;
-		right: -30%;
+		left: 30%;
 		z-index: -1;
 	}
 

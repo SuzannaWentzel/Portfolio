@@ -3,13 +3,13 @@
 		<div class="container-fluid">
 			<div class="intro row">
 				<div class="col-6 ">
-					<h1 class="right">Hello, I'm</h1>
+					<header class="right">Hello, I'm</header>
 				</div>
 				<div class="col-6">
-					<h1 class="left">
+					<header class="left">
 						<span class="typed-text">{{ typeValue }}</span>
 						<span class="cursor" :class="{'typing': typeStatus}"></span>
-					</h1>
+					</header>
 					<p class="pause" v-if="!paused" @click="pauseTyping()"><i class="fas fa-pause"></i></p>
 					<p class="pause" v-if="paused" @click="resumeTyping()"><i class="fas fa-play"></i></p>
 				</div>
@@ -168,7 +168,7 @@
 			box-sizing: border-box;
 			margin-bottom: 3rem;
 
-			& h1 {
+			& header {
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
@@ -217,18 +217,6 @@
 	}
 
 	@media only screen and (max-width: 576px) {
-		h1 {
-			font-size: 1.5rem;
-		}
-
-		h2 {
-			font-size: 1.3rem;
-		}
-
-		p {
-			font-size: 0.75rem;
-		}
-
 		.intro {
 			height: 20vh;
 		}
@@ -243,11 +231,6 @@
 		}
 	}
 	@media only screen and (min-width: 576px) {
-		h2 {
-			font-size: 1.5rem;
-			margin-bottom: 1rem;
-		}
-
 		.cursor{
 			height: 1.9rem;
 		}
