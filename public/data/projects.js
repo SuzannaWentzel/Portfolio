@@ -1,5 +1,6 @@
 const universityProjects = [
     {
+        slug: 'spydar',
         title: "Spydar",
         imgs: [],
         videos: [],
@@ -20,6 +21,7 @@ const universityProjects = [
         tags: ['Application', 'Experience', 'Creative']
     },
     {
+        slug: 'line_drawings',
         title: 'Line drawings',
         imgs: [],
         videos: [],
@@ -37,18 +39,22 @@ const universityProjects = [
         tags: ['Website', 'Creative', 'Art']
     },
     {
+        slug: 'ml_familiarity',
         title: 'ML algorithm to recognize familiarity',
     },
     {
+        slug: 'tinker_portfolio',
         title: 'Tinker portfolio',
     },
     {
+        slug: 'once_upon_a_slide',
         title: 'Once Upon a Slide',
         imgs: [],
         videos: [],
         shortDescription: 'Slide builder, Application Development Norway'
     },
     {
+        slug: 'curb',
         title: 'Curb',
         imgs: [],
         videos: [],
@@ -58,6 +64,7 @@ const universityProjects = [
 
 const personalCodingProjects = [
     {
+        slug: 'jarvis',
         title: "Jarvis",
         imgs: [],
         videos: [],
@@ -73,6 +80,7 @@ const personalCodingProjects = [
         tags: ['WIP']
     },
     {
+        slug: 'snuifhuis_website',
         title: "Snuifhuis Website",
         imgs: [],
         videos: [],
@@ -85,6 +93,7 @@ const personalCodingProjects = [
         tags: ['WIP']
     },
     {
+        slug: 'norway_blog',
         title: "Norway blog",
         imgs: [],
         videos: [],
@@ -103,6 +112,7 @@ const personalCodingProjects = [
 
 const personalCreativeProjects = [
     {
+        slug: 'shoes',
         title: "Shoes",
         imgs: [],
         videos: [],
@@ -115,6 +125,7 @@ const personalCreativeProjects = [
         tags: []
     },
     {
+        slug: 'fabric_art',
         title: "FabricArt",
         imgs: [],
         videos: [],

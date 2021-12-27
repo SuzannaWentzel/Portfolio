@@ -21,6 +21,10 @@
 		border: none;
 		box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
 
+		&:hover {
+			box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.7);
+		}
+
 		p, h4 {
 			background: none;
 			box-shadow: none;

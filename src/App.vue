@@ -64,6 +64,10 @@ export default {
     color: black;
   }
 
+  .pointer {
+    cursor: pointer;
+  }
+
   @media only screen and (max-width: 576px) {
     h1, header {
       font-size: 1.5rem;
