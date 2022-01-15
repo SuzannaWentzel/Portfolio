@@ -1,41 +1,23 @@
 <template>
 	<div class="home-banner">
-		<div class="container-fluid">
-			<div class="intro row">
-				<div class="col-6 ">
+		<div class="container-fluid d-flex align-items-center">
+			<div class="intro row align-items-center">
+				<div class="col-6">
 					<header class="right">Hello, I'm</header>
 				</div>
-				<div class="col-6">
+				<div class="col-6 col-md-5">
 					<header class="left">
 						<span class="typed-text">{{ typeValue }}</span>
 						<span class="cursor" :class="{'typing': typeStatus}"></span>
 					</header>
+				</div>
+				<div class="col-12 col-md-1">
 					<p class="pause" v-if="!paused" @click="pauseTyping()"><i class="fas fa-pause"></i></p>
 					<p class="pause" v-if="paused" @click="resumeTyping()"><i class="fas fa-play"></i></p>
 				</div>
 			</div>
-
-				<!--<div class="col-lg-4">-->
-					<!--<p>5 traits that describe me:</p>-->
-					<!--<p class="list-item">Curious</p>-->
-					<!--<p class="list-item">Hardworking</p>-->
-					<!--<p class="list-item">Loyal</p>-->
-					<!--<p class="list-item">Responsible</p>-->
-					<!--<p class="list-item">Caring</p>-->
-				<!--</div>-->
-
-				<!--<div class=col-lg-4>-->
-					<!--<p>What I like & interests:</p>-->
-					<!--<p class="list-item">Web development <br>(Frontend, backend & connection)</p>-->
-					<!--<p class="list-item">Web design & UX</p>-->
-					<!--<p class="list-item">Working in teams (scrum/agile etc)</p>-->
-					<!--<p class="list-item">Natural language/speech processing</p>-->
-					<!--<p class="list-item">Affective computing</p>-->
-				<!--</div>-->
-
 		</div>
-		<div class="about-me" v-scroll-to="'#aspiration-banner'">
-			<p>Read more about me </p>
+		<div class="about-me" v-scroll-to="'#about-banner'">
 			<i class="fas fa-angle-double-down"></i>
 		</div>
 	</div>
@@ -48,7 +30,7 @@
             return {
                 typeValue: '',
                 typeStatus: false,
-                typeArray: ["a developer", "an engineer", "a learner", "a creator", "a drummer", "a pianist", "a gardener", "Suzanna"],
+                typeArray: ["a developer", "an engineer", "a learner", "a creator", "a pianist", "a gardener", "Suzanna"],
                 typeSpeed: 80,
                 erasingSpeed: 50,
                 newTextDelay: 3000,
@@ -106,7 +88,6 @@
                 this.paused = true;
             },
             resumeTyping() {
-                console.log('resuminggggg');
                 this.paused = false;
                 if (this.erasing) {
                     this.eraseText();
@@ -142,12 +123,18 @@
 		height: 100%;
 		position: relative;
 
+		background-image: url('../../../public/images/blobs/main_blob.png');
+		background-repeat: no-repeat;
+
 		.about-me {
 			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			align-items: center;
+			width: 100%;
 			cursor: pointer;
 			bottom: 5%;
-			left: 50%;
-			transform: translateX(-50%);
 
 			&:hover {
 				color: var(--dark);
@@ -160,25 +147,27 @@
 			i {
 				font-size: 2rem;
 			}
+
+			p {
+				width: max-content;
+			}
 		}
 
 		.intro {
-			height: 100%;
-			padding-top: 3rem;
+			width: 100%;
 			box-sizing: border-box;
-			margin-bottom: 3rem;
 
 			& header {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
+				// width: max-content;
+				padding: 0 1rem;
+				display: inline-block;
 
 				&.right {
-					right: 0.5rem;
+					float: right;
 				}
 
 				&.left {
-					left: 0.5rem;
+					float: left;
 				}
 
 				& .cursor {
@@ -204,9 +193,11 @@
 			}
 
 			.pause {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-40%);
+				margin-bottom: 0;
+				background: none;
+				box-shadow: none;
+				width: 100%;
+				text-align: center;
 			}
 		}
 	}
@@ -216,9 +207,18 @@
 		height: 100%;
 	}
 
+	header {
+		background-color: rgba(255, 255, 255, 0.5);
+		box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
+		padding: 0.1rem 0.5rem;
+		border-radius: 3px;
+	}
+
 	@media only screen and (max-width: 576px) {
-		.intro {
-			height: 20vh;
+		.home-banner {
+			background-position-y: 50%;
+			background-position-x: 50%;
+			background-size: cover;
 		}
 
 		.cursor {
@@ -226,42 +226,53 @@
 		}
 
 		.pause {
-			right: 10%;
+			margin-top: 1.5rem;
 			font-size: 1rem;
 		}
 	}
 	@media only screen and (min-width: 576px) {
-		.cursor{
+		.home-banner {
+			background-position-y: 50%;
+			background-position-x: 50%;
+			background-size: cover;
+		}
+
+		.cursor {
 			height: 1.9rem;
 		}
 
-		.intro {
-			height: 30vh;
-		}
-
 		.pause {
+			margin-top: 2rem;
 			font-size: 1.5rem;
-			right: 10%;
 		}
 	}
 	@media only screen and (min-width: 768px) {
-		.cursor {
-			height: 2.9rem;
+		.home-banner {
+			background-position-x: 20%;
+			background-position-y: 50%;
+			background-size: 90%;
 		}
-	}
-	@media only screen and (min-width: 992px) {
-		.intro {
-			padding: 3rem;
-			height: 40vh;
+
+		.cursor {
+			height: 2.3rem;
 		}
 
 		.pause {
-			right: 15%;
+			margin-top: 0;
+		}
+	}
+	@media only screen and (min-width: 992px) {
+		.home-banner {
+			background-size: 80%;
+		}
+
+		.cursor {
+			height: 2.5rem;
 		}
 	}
 	@media only screen and (min-width: 1200px){
-      .pause {
-         right: 20%;
-      }
+		.home-banner {
+			background-size: 70%;
+		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<p>© Suzanna Wentzel, 2020</p>
+	<p>© Suzanna Wentzel, 2022</p>
 </template>
 
 <script>
@@ -10,14 +10,14 @@
 
 <style lang="scss" scoped>
 	p {
-		position: absolute;
 		width: 100%;
-		padding: 0.75rem 10% 0.75rem;
+		padding: 0.75rem calc(10% + 1rem) 0.75rem;
 		text-align: right;
 		bottom: -30px;
 		margin-bottom: 0;
-		background-color: var(--dark);
-		color: white;
+		background-image: url('../../public/images/blobs/footer_light.png');
+		background-size: cover;
+		color: var(--black);
 		border-radius: 0px;
 	}
 </style>
