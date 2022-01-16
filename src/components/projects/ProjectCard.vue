@@ -1,6 +1,6 @@
 <template>
-	<div class="card">
-		<h4>{{ project.title }}</h4>
+	<div class="card" :class="[{'border-left': !project.enlarged}, project.type.toLowerCase()]">
+		<h5><strong>{{ project.title }}</strong></h5>
 		<p v-if="project.shortDescription">{{ project.shortDescription }}</p>
 	</div>
 </template>
@@ -20,14 +20,26 @@
 		background: rgba(255, 255, 255, 0.8);
 		border: none;
 		box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
+		min-height: 8rem;
 
 		&:hover {
 			box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.7);
 		}
 
-		p, h4 {
-			background: none;
-			box-shadow: none;
+		&.border-left {
+			border-left: 0.5rem solid black !important;
+
+			&.personal {
+				border-color: var(--cyan) !important;
+			}
+
+			&.university {
+				border-color: var(--magenta) !important;
+			}
+
+			&.creative {
+				border-color: var(--orange) !important;
+			}
 		}
 	}
 </style>
