@@ -12,7 +12,7 @@
 							<p class="pr-3 mt-5">Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
 							<p class="pr-3">I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, and playing board games.</p>
 							<p class="pr-3">What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
-							<button class="btn btn-primary mb-3">Send me a message</button>
+							<!-- <button class="btn btn-primary mb-3">Send me a message</button> -->
 						</div>
 					</div>
 				</div>
