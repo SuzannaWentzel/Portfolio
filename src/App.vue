@@ -100,6 +100,10 @@ export default {
     color: var(--black);
   }
 
+	.justify {
+		text-align: justify;
+	}
+
   @media only screen and (max-width: 576px) {
     h1, header {
       font-size: 1.5rem;

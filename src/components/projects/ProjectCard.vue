@@ -19,11 +19,11 @@
 		padding: 1rem;
 		background: rgba(255, 255, 255, 0.8);
 		border: none;
-		box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
+		box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.5);
 		min-height: 8rem;
 
 		&:hover {
-			box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.7);
+			box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.9);
 		}
 
 		&.border-left {
