@@ -14,10 +14,10 @@
 					<p v-for="(alinea, index) in project.longDescription" v-bind:key="index">{{ alinea }}</p>
 				</div>
 				<div class="my-5 btn-container">
-					<a v-if="project.url" class="btn btn-link" :href="project.url" title="Link to website">
+					<a v-if="project.url" class="btn btn-link website" :href="project.url" title="Link to website">
 						<i class="fa-solid fa-globe"></i>
 					</a>
-					<a v-if="project.repository" class="btn btn-link" :href="project.repository" title="Link to code">
+					<a v-if="project.repository" class="btn btn-link code" :href="project.repository" title="Link to code">
 						<i class="fa-solid fa-code"></i>
 					</a>
 				</div>
@@ -65,7 +65,7 @@
 			background-color: var(--black);
 			color: white;
 			border-radius: 50%;
-			box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
+			box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.8);
 			width: 3em;
 			height: 3em;
 			line-height: 2em;
@@ -73,6 +73,14 @@
 			&:hover {
 				background-color: rgba(5, 2, 3, 0.7);
 				text-decoration: none;
+
+				&.website {
+					box-shadow: 2px -4px 8px 0 rgba(33, 231, 255, 0.8), -2px 4px 8px 0 rgba(255, 150, 71, 0.8);
+				}
+
+				&.code {
+					box-shadow: -4px 0px 8px 0 rgba(127, 71, 255, 0.8), 4px 0px 8px 0 rgba(255, 243, 84, 0.8);
+				}
 			}
 		}
 
