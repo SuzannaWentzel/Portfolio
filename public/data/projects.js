@@ -1,4 +1,142 @@
-const allProjects = [   
+const allProjects = [
+    // {
+    //     slug: '',
+    //     title: '',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'portfolio',
+    //     title: 'Portfolio website',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: 'https://github.com/SuzannaWentzel/Portfolio',
+    //     url: 'www.suzannawentzel.nl',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'planter',
+    //     title: 'Custom planter',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'tea_box',
+    //     title: 'Happy tea box',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'fairy_tales',
+    //     title: 'Fairy tale generator',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'story_generator',
+    //     title: 'Story generator',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    {
+        slug: 'habit_app',
+        title: 'Habit app',
+        type: 'University project',
+        imgs: [],
+        videos: [],
+        shortDescription: 'UX project to support forming habits',
+        longDescription: ['In the course \'Concepts, Measures and Methods\' we learned a plethora of techniques to study ' +
+            'user experience. To complete the course, I had to perform an extensive UX research myself. I was curious if I ' +
+            'would be able to design a mobile application that would be able to support students forming habits.',
+            'I gathered a lot of information about how people work on forming habits and what they need, using interviews, diary ' +
+            'studies, and a card sort to structure all required functionalities. After creating and evaluating a prototype (using MarvelApp, you can check it out in the link below), ' +
+            'I found that it was not yet usable enough as it contained some usability issues in the navigation. The (functional) design was however promising, ' +
+            'and with some improvements (in a future design cycle) could potentially support students in forming habits.',
+            'Note that the design is purely functional, not in any way graphical, as the main purpose was carrying out the ' +
+            'research and not having a fully designed product'],
+        repository: '',
+        url: 'https://marvelapp.com/prototype/cjhg211/screen/82751102',
+        report: '',
+        date: '2021-10-29',
+        tags: ['Application', 'UX']
+    },
+    // {
+    //     slug: 'weather_app',
+    //     title: 'Huemidity',
+    //     type: '',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    {
+        slug: 'plastic_soup',
+        title: 'Plastic Soup',
+        type: 'University project',
+        imgs: [],
+        videos: [],
+        shortDescription: 'Teaching material about the plastic soup',
+        longDescription: ['For my educational master (specifically for the course "Ontwerp Studio"), together with 3 ' +
+            'other students, I created study materials to educate high school students about the plastic soup in oceans. The idea of the course was ' +
+            'to create a transdisciplinary module (integrating different disciplines).', 'We chose the subject "plastic soup" ' +
+            'and created a series of lessons (including a teachers\' guide, worksheets and a card to collect stamps) that ' +
+            'explains the problem and lets students familiarize with it. The goal of the lessons was that our students come ' +
+            'up with solutions that can be tackled within school to help solve the problem. We had the generous opportunity ' +
+            'to conduct the lessons in a school in Almelo. Students came up with wonderful ideas (for instance, advising the ' +
+            'school board to consider not buying plastic furniture anymore).' ],
+        date: '2021-07-15',
+        tags: ['Education', 'Plastic Soup']
+    },
     {
         slug: 'spydar',
         title: 'Spydar',
@@ -27,7 +165,7 @@ const allProjects = [
         type: 'University project',
         imgs: [],
         videos: [],
-        shortDescription: 'Mathematical artwork with which line animations are created',
+        shortDescription: 'Mathematical artwork that creates mesmerizing line drawings',
         longDescription: ['During the course Art, Mathematics and Technology, we had to make weekly centerpieces, each ' +
             'centered around a different mathematical subject (geometry, symmetry, rules & patterns, motion and sound). ' +
             'As final project, we had to create a centerpiece containing one or more of these subjects.','I chose motion ' +
