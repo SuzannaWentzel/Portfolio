@@ -8,7 +8,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div :id="'project-card-' + project.slug" v-for="project of allProjects" :key="project.title" v-scroll-to="'#project-card-' + project.slug" @click="enlargeCard(project)" class="pointer project-container col-12" :class="project.enlarged? 'col-md-12': 'col-md-3'">
+					<div :id="'project-card-' + project.slug" v-for="project of allProjects" :key="project.title" @click="enlargeCard(project)" class="pointer project-container col-12" :class="project.enlarged? 'col-md-12': 'col-md-3'">
 						<project-card v-if="!project.enlarged" :project="project"></project-card>
 						<big-project-card v-if="project.enlarged" :project="project"></big-project-card>
 					</div>
@@ -25,6 +25,8 @@
 	import ProjectCard from '../components/projects/ProjectCard';
 	import Vue from 'vue';
 	import BigProjectCard from '../components/projects/BigProjectCard.vue';
+	import * as VueScrollTo from 'vue-scrollto';
+
 
 	export default {
       name: "Projects",
@@ -45,6 +47,8 @@
 				// set correct project to enlarge
 				index = this.allProjects.findIndex(item => item.title == project.title);
 				Vue.set(this.allProjects[index], 'enlarged', true);
+
+				VueScrollTo.scrollTo('#project-card-' + project.slug)
 
 				// TODO: CREATE ENLARGED CARD WITH MORE INFO
 				// TODO: MAKE SCROLLING LESS WONKY

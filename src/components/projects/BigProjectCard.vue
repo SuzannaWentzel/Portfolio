@@ -14,10 +14,10 @@
 					<p v-for="(alinea, index) in project.longDescription" v-bind:key="index">{{ alinea }}</p>
 				</div>
 				<div class="my-5 btn-container">
-					<a v-if="project.url" class="btn btn-link website" :href="project.url" title="Link to website">
+					<a v-if="project.url" class="btn btn-link website" :href="project.url" target="_blank" title="Link to website">
 						<i class="fa-solid fa-globe"></i>
 					</a>
-					<a v-if="project.repository" class="btn btn-link code" :href="project.repository" title="Link to code">
+					<a v-if="project.repository" class="btn btn-link code" :href="project.repository" target="_blank" title="Link to code">
 						<i class="fa-solid fa-code"></i>
 					</a>
 				</div>
