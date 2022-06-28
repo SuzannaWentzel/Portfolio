@@ -23,6 +23,7 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-6">
+				<img v-if="project.imgs[0]" :src="'../../../images/project_images/' + project.imgs[0]" class="mt-4 px-4">
 				<!-- TODO: ADD IMAGE/VIDEO HERE -->
 			</div>
 		</div>
@@ -100,6 +101,10 @@
 			&.creative {
 				background-color: var(--orange);
 			}
+		}
+
+		img {
+			width: 100%;
 		}
 	}
 

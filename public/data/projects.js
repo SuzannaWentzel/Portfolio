@@ -87,7 +87,7 @@ const allProjects = [
         slug: 'habit_app',
         title: 'Habit app',
         type: 'University project',
-        imgs: [],
+        imgs: ['habit-app.png'],
         videos: [],
         shortDescription: 'UX project to support forming habits',
         longDescription: ['In the course \'Concepts, Measures and Methods\' we learned a plethora of techniques to study ' +
@@ -141,7 +141,7 @@ const allProjects = [
         slug: 'spydar',
         title: 'Spydar',
         type: 'University project',
-        imgs: [],
+        imgs: ['spydar.png'],
         videos: [],
         shortDescription: 'Android application for a spy experience',
         longDescription: ['For the course Designing Interactive Experiences, we had to design and construct a multi-modal ' +
@@ -182,6 +182,8 @@ const allProjects = [
         slug: 'tinker_portfolio',
         title: 'Tinker portfolio',
         type: 'University project',
+        imgs: ['tinkering.jpg'],
+        videos: [],
         shortDescription: '',
         longDescription: []
     },
@@ -189,7 +191,7 @@ const allProjects = [
         slug: 'once_upon_a_slide',
         title: 'Once Upon a Slide',
         type: 'University project',
-        imgs: [],
+        imgs: ['once-upon-a-slide.png'],
         videos: [],
         shortDescription: 'Slide builder, Application Development Norway',
         longDescription: ['During my exchange at UiA (Universitetet i Agder, Norway), I followed the course \'Application '+ 
