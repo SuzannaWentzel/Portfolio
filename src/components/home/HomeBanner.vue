@@ -37,7 +37,7 @@
                 nameDelay: 10000,
                 typeArrayIndex: 0,
                 charIndex: 0,
-                paused: false,       // TODO: set to false bf pushing !!
+                paused: false,
                 erasing: false
             }
         },
@@ -159,7 +159,6 @@
 			box-sizing: border-box;
 
 			& header {
-				// width: max-content;
 				padding: 0 1rem;
 				display: inline-block;
 

@@ -1,9 +1,6 @@
 <template>
   <div id="app">
     <div class="nav">
-      <!-- <router-link to="/">
-        <img src="../public/images/full_logo.png" class="logo" />
-      </router-link> -->
       <h6><router-link to="/">ABOUT</router-link></h6>
       <h6><router-link to="/projects">PROJECTS</router-link></h6>
       <!--<p>Achievements</p>-->
@@ -44,11 +41,6 @@ export default {
 
 <style lang="scss">
   :root {
-    // --primary: #85AA82;
-    // --orange: #F4A153;
-    // --red: #CC403A;
-    // --dark: #254844;
-    // --light: #F1E1B4;
     --orange: #ff9647;
     --lemon: #fff354;
     --magenta: #ff3b8b;
@@ -66,7 +58,6 @@ export default {
   }
 
   body {
-    /*background-color: var(--light);*/
     color: var(--black);
     overflow-x: hidden;
     margin: 0;
