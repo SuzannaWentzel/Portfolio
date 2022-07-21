@@ -1,5 +1,5 @@
 <template>
-	<p>© Suzanna Wentzel, 2022</p>
+	<p><span class="copyright">©</span> Suzanna Wentzel, 2022</p>
 </template>
 
 <script>
@@ -19,5 +19,10 @@
 		background-size: cover;
 		color: var(--black);
 		border-radius: 0px;
+		font-size: 0.9rem;
+	}
+
+	.copyright {
+		font-family: Montserrat, sans-serif;
 	}
 </style>

@@ -10,9 +10,9 @@
 						<div class="col-12 col-md-6 justify">
 							<h2><strong>Suzanna Wentzel</strong></h2>
 							<h5>(Web) developer</h5>
-							<p class="pr-3 mt-5">Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
-							<p class="pr-3">I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, and playing board games.</p>
-							<p class="pr-3">What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
+							<p class="mt-5">Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
+							<p>I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, and playing board games.</p>
+							<p>What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
 							<!-- <button class="btn btn-primary mb-3">Send me a message</button> -->
 						</div>
 					</div>
@@ -38,6 +38,7 @@
 
 	.card-container {
 		height: 100%;
+		margin-right: 0;
 	}
 
 	.img-container {
@@ -60,6 +61,10 @@
 				margin-bottom: 3rem;
 			}
 		}
+		
+		p {
+			padding-right: 0;
+		}
 	}
 
 	@media only screen and (min-width: 576px) {
@@ -68,6 +73,10 @@
 				margin-top: 3rem;
 				margin-bottom: 5rem;
 			}
+		}
+
+		p {
+			padding-right: 0;
 		}
 	}
 
@@ -83,17 +92,29 @@
 		.img-container{
 			padding: 2rem;
 		}
+
+		p {
+			padding-right: 1rem;
+		}
 	}
 
 	@media only screen and (min-width: 992px) {
 		.img-container {
 			padding: 3rem;
 		}
+
+		p {
+			padding-right: 2rem;
+		}
 	}
 
 	@media only screen and (min-width: 1200px){
 		.img-container {
 			padding: 5rem;
+		}
+
+		p {
+			padding-right: 4rem;
 		}
 	}
 </style>

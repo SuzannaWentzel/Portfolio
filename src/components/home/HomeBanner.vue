@@ -154,6 +154,7 @@
 		}
 
 		.intro {
+			margin-left: 0px;
 			width: 100%;
 			box-sizing: border-box;
 
