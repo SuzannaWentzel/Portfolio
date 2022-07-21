@@ -14,9 +14,51 @@ const allProjects = [
     //     tags: []
     // },
     // {
+    //     slug: 'ovo',
+    //     title: 'Motivating students',
+    //     type: 'University project',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: 'Research on how to motivate high school students',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'furhat',
+    //     title: 'Persuasion bot',
+    //     type: 'University project',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: 'Conversational Agent that tries to change your opinion',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
+    //     slug: 'audio-story',
+    //     title: 'The Mysterious Pond',
+    //     type: 'University project',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: 'Audio Story',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: 'https://audiomack.com/storytelling-through-sound/song/suzanna-the-mysterious-pond',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    // {
     //     slug: 'portfolio',
     //     title: 'Portfolio website',
-    //     type: '',
+    //     type: 'Personal project',
     //     imgs: [],
     //     videos: [],
     //     shortDescription: '',
@@ -30,7 +72,7 @@ const allProjects = [
     // {
     //     slug: 'planter',
     //     title: 'Custom planter',
-    //     type: '',
+    //     type: 'Creative project',
     //     imgs: [],
     //     videos: [],
     //     shortDescription: '',
@@ -44,7 +86,7 @@ const allProjects = [
     // {
     //     slug: 'tea_box',
     //     title: 'Happy tea box',
-    //     type: '',
+    //     type: 'Creative project',
     //     imgs: [],
     //     videos: [],
     //     shortDescription: '',
@@ -58,7 +100,7 @@ const allProjects = [
     // {
     //     slug: 'fairy_tales',
     //     title: 'Fairy tale generator',
-    //     type: '',
+    //     type: 'University Project',
     //     imgs: [],
     //     videos: [],
     //     shortDescription: '',
@@ -69,20 +111,28 @@ const allProjects = [
     //     date: '',
     //     tags: []
     // },
-    // {
-    //     slug: 'story_generator',
-    //     title: 'Story generator',
-    //     type: '',
-    //     imgs: [],
-    //     videos: [],
-    //     shortDescription: '',
-    //     longDescription: [],
-    //     repository: '',
-    //     url: '',
-    //     report: '',
-    //     date: '',
-    //     tags: []
-    // },
+    {
+        slug: 'story_generator',
+        title: 'Story generator',
+        type: 'University project',
+        imgs: [],
+        videos: [],
+        shortDescription: 'Generating new stories from existing books',
+        longDescription: ['For the course \'Natural Language Processing\' we created a model that generates new stories '+
+            'from existing ones, to see if such models could imitate the writing style of the original authors. ',
+            'We created two language models using n-grams and Maximum Likelihood Estimation on datasets of both ' + 
+            'Lord of the Rings (Tolkien) and A Song of Ice and Fire (George R. R. Martin). These language models '+ 
+            'were evaluated against the original works of the authors using a survey. ',
+            'The results show that the language models are not yet capable of imitating the styles of the authors well '+ 
+            'enough to be considered in the same style as the authors. However, they did present funny stories and even '+ 
+            'though lots of improvements can be done, we learned a lot.'
+        ],
+        repository: '',
+        url: '',
+        report: '',
+        date: '',
+        tags: []
+    },
     {
         slug: 'habit_app',
         title: 'Habit app',
@@ -105,20 +155,25 @@ const allProjects = [
         date: '2021-10-29',
         tags: ['Application', 'UX']
     },
-    // {
-    //     slug: 'weather_app',
-    //     title: 'Huemidity',
-    //     type: '',
-    //     imgs: [],
-    //     videos: [],
-    //     shortDescription: '',
-    //     longDescription: [],
-    //     repository: '',
-    //     url: '',
-    //     report: '',
-    //     date: '',
-    //     tags: []
-    // },
+    {
+        slug: 'weather_app',
+        title: 'Huemidity',
+        type: 'Personal project',
+        imgs: [],
+        videos: [],
+        shortDescription: 'Android weather application',
+        longDescription: ['In the summer of 2021, I wanted to start a fun project to practice my mobile application design and development skills. ' +
+            'I decided to create a weather application from scratch. I’ve seen many designers do that on Pinterest and it seemed fun. ',
+            'I started with creating a list of the functionalities I wanted to include, sketched wireframes and watched ' + 
+            'a lot of Adobe Illustrator tutorials. I created some art, and in Android Studio I put together the application, requesting weather forecasts from the OpenWeatherMap API.',
+            'The goal was to have a first version working at the end of the summer break, that goal was met!',
+        ],
+        repository: 'https://github.com/SuzannaWentzel/Huemidity',
+        url: '',
+        report: '',
+        date: '',
+        tags: ['Application', 'UX', 'Creative']
+    },
     {
         slug: 'plastic_soup',
         title: 'Plastic Soup',
@@ -165,7 +220,7 @@ const allProjects = [
         type: 'University project',
         imgs: [],
         videos: [],
-        shortDescription: 'Mathematical artwork that creates mesmerizing line drawings',
+        shortDescription: 'Mathematical artwork that makes mesmerizing drawings',
         longDescription: ['During the course Art, Mathematics and Technology, we had to make weekly centerpieces, each ' +
             'centered around a different mathematical subject (geometry, symmetry, rules & patterns, motion and sound). ' +
             'As final project, we had to create a centerpiece containing one or more of these subjects.','I chose motion ' +
