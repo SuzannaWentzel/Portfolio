@@ -4,7 +4,8 @@
 			<div class="col-12 card-sub-container">
 				<div class="card">
 					<div class="row d-flex card-content-container align-items-center">
-						<div class="col-12 col-md-6 img-background">
+						<div class="col-12 col-md-6 img-container">
+							<img src="../../../public/images/suzanna.jpeg"/>
 						</div>
 						<div class="col-12 col-md-6 justify">
 							<h2><strong>Suzanna Wentzel</strong></h2>
@@ -39,12 +40,13 @@
 		height: 100%;
 	}
 
-	.img-background {
-		// background-image: url('../../../public/images/me_lessbright.png');
-		height: 100%;
-		background-position: center;
-		background-size: contain;
-		background-repeat: no-repeat;
+	.img-container {
+		img {
+			border-radius: 0.25rem;
+			width: 100%;
+			margin-bottom: 1rem;
+			box-shadow: 0 10px 30px -5px var(--lemon), 10px 0 30px -5px var(--orange), 0 -10px 30px -2px var(--magenta), -10px 0 30px 0 var(--cyan);
+		}
 	}
 
 	.card-content-container {
@@ -52,9 +54,21 @@
 	}
 
 	@media only screen and (max-width: 576px) {
+		.img-container {
+			img {
+				margin-top: 2rem;
+				margin-bottom: 3rem;
+			}
+		}
 	}
 
 	@media only screen and (min-width: 576px) {
+		.img-container {
+			img {
+				margin-top: 3rem;
+				margin-bottom: 5rem;
+			}
+		}
 	}
 
 	@media only screen and (min-width: 768px) {
@@ -65,11 +79,21 @@
 				height: 100%;
 			}
 		}
+
+		.img-container{
+			padding: 2rem;
+		}
 	}
 
 	@media only screen and (min-width: 992px) {
+		.img-container {
+			padding: 3rem;
+		}
 	}
 
 	@media only screen and (min-width: 1200px){
+		.img-container {
+			padding: 5rem;
+		}
 	}
 </style>
