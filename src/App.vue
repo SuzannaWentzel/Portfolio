@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="nav">
-      <h6><router-link to="/">ABOUT</router-link></h6>
+      <h6><router-link to="/home">ABOUT</router-link></h6>
       <h6><router-link to="/projects">PROJECTS</router-link></h6>
       <!--<p>Achievements</p>-->
       <!--<p>Contact</p>-->
@@ -178,7 +178,7 @@ body {
       text-decoration: underline;
     }
 
-    .router-link-exact-active {
+    .router-link-active {
       font-weight: bold;
     }
   }

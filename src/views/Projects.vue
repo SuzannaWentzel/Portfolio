@@ -8,7 +8,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div :id="'project-card-' + project.slug" v-for="project of allProjects" :key="project.title" @click="enlargeCard(project)" class="pointer project-container col-12" :class="project.enlarged? 'col-md-12': 'col-md-3'">
+					<div :id="'project-card-' + project.slug" v-for="project of allProjects" :key="project.title" @click="enlargeCard(project.slug)" class="pointer project-container col-12" :class="project.enlarged? 'col-md-12': 'col-md-3'">
 						<project-card v-if="!project.enlarged" :project="project"></project-card>
 						<big-project-card v-if="project.enlarged" :project="project"></big-project-card>
 					</div>
@@ -36,8 +36,13 @@
 				allProjects: projects.allProjects,
 			}
 		},
+		created() {
+			if (Object.keys(this.$route.params).length !== 0 && Object.keys(this.$route.params.projectSlug).length !== 0) {
+				this.enlargeCard(this.$route.params.projectSlug);
+			}
+		},
 		methods: {
-			enlargeCard(project) {
+			enlargeCard(projectSlug) {
 				let index;
 				// Remove previously set properties that enlarge those projects of other sections
 				for (let i in this.allProjects) {
@@ -45,10 +50,10 @@
 				}
 
 				// set correct project to enlarge
-				index = this.allProjects.findIndex(item => item.title == project.title);
+				index = this.allProjects.findIndex(item => item.slug == projectSlug);
 				Vue.set(this.allProjects[index], 'enlarged', true);
 
-				VueScrollTo.scrollTo('#project-card-' + project.slug)
+				VueScrollTo.scrollTo('#project-card-' + projectSlug)
 
 				// TODO: CREATE ENLARGED CARD WITH MORE INFO
 				// TODO: MAKE SCROLLING LESS WONKY

@@ -1,17 +1,17 @@
 <template>
 	<div id="about-banner" class="container-fluid">
-		<div class="row card-container d-flex align-items-center">
+		<div class="row card-container d-flex align-items-center mb-5">
 			<div class="col-12 card-sub-container">
 				<div class="card">
 					<div class="row d-flex card-content-container align-items-center">
 						<div class="col-12 col-md-6 img-container">
-							<img src="../../../public/images/suzanna.jpeg"/>
+							<img src="../../../public/images/suzanna.jpg"/>
 						</div>
 						<div class="col-12 col-md-6 justify">
 							<h2><strong>Suzanna Wentzel</strong></h2>
 							<h5>(Web) developer</h5>
 							<p class="mt-5">Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
-							<p>I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, and playing board games.</p>
+							<p>I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, sporting, going outside and playing board games.</p>
 							<p>What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
 							<!-- <button class="btn btn-primary mb-3">Send me a message</button> -->
 						</div>
@@ -31,13 +31,13 @@
 <style lang="scss" scoped>
 	#about-banner {
 		width: 100%;
-		height: 100%;
+		min-height: 100vh;
 		position: relative;
 		overflow: hidden;
 	}
 
 	.card-container {
-		height: 100%;
+		min-height: 100vh;
 		margin-right: 0;
 	}
 

@@ -109,7 +109,9 @@ const allProjects = [
     //     url: '',
     //     report: '',
     //     date: '',
-    //     tags: []
+    //     tags: [],
+        // starred: false
+
     // },
     {
         slug: 'story_generator',
@@ -131,7 +133,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: []
+        tags: [],
+        starred: true,
     },
     {
         slug: 'habit_app',
@@ -153,7 +156,8 @@ const allProjects = [
         url: 'https://marvelapp.com/prototype/cjhg211/screen/82751102',
         report: '',
         date: '2021-10-29',
-        tags: ['Application', 'UX']
+        tags: ['Application', 'UX'],
+        starred: false
     },
     {
         slug: 'weather_app',
@@ -172,7 +176,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: ['Application', 'UX', 'Creative']
+        tags: ['Application', 'UX', 'Creative'],
+        starred: true
     },
     {
         slug: 'plastic_soup',
@@ -190,7 +195,8 @@ const allProjects = [
             'to conduct the lessons in a school in Almelo. Students came up with wonderful ideas (for instance, advising the ' +
             'school board to consider not buying plastic furniture anymore).' ],
         date: '2021-07-15',
-        tags: ['Education', 'Plastic Soup']
+        tags: ['Education', 'Plastic Soup'],
+        starred: false
     },
     {
         slug: 'spydar',
@@ -212,7 +218,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: ['Application', 'Experience', 'Creative']
+        tags: ['Application', 'Experience', 'Creative'],
+        starred: false
     },
     {
         slug: 'line_drawings',
@@ -231,7 +238,8 @@ const allProjects = [
         url: 'https://linedrawings.suzannawentzel.nl/',
         report: '',
         date: '',
-        tags: ['Website', 'Creative', 'Art']
+        tags: ['Website', 'Creative', 'Art'],
+        starred: true
     },
     {
         slug: 'tinker_portfolio',
@@ -240,7 +248,8 @@ const allProjects = [
         imgs: ['tinkering.jpg'],
         videos: [],
         shortDescription: '',
-        longDescription: []
+        longDescription: [],
+        starred: false
     },
     {
         slug: 'once_upon_a_slide',
@@ -255,6 +264,7 @@ const allProjects = [
             'fun to work on this, especially in this nice team of students from different countries.', 'We created it '+ 
             'from scratch, from pure HTML, CSS & JavaScript. It was deployed using Heroku.'],
         url: 'https://once-upon-a-slide.herokuapp.com/',
+        starred: false
     },
     {
         slug: 'curb',
@@ -262,7 +272,8 @@ const allProjects = [
         type: 'University project',
         imgs: [],
         videos: [],
-        shortDescription: 'Bachelor design project: Curriculum Builder'
+        shortDescription: 'Bachelor design project: Curriculum Builder',
+        starred: false
     }, 
     {
         slug: 'jarvis',
@@ -279,7 +290,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: ['WIP']
+        tags: ['WIP'],
+        starred: false
     },
     {
         slug: 'snuifhuis_website',
@@ -296,7 +308,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: ['WIP']
+        tags: ['WIP'],
+        starred: false
     },
     {
         slug: 'norway_blog',
@@ -313,7 +326,8 @@ const allProjects = [
         url: 'https://norway.suzannawentzel.nl/',
         report: '',
         date: '',
-        tags: []
+        tags: [],
+        starred: false
     },
     {
         slug: 'shoes',
@@ -327,7 +341,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: []
+        tags: [],
+        starred: false
     },
     {
         slug: 'fabric_art',
@@ -341,7 +356,8 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: []
+        tags: [],
+        starred: false
     },
 ]
 

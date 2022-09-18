@@ -1,5 +1,5 @@
 <template>
-	<div class="card" :class="[{'border-left': !project.enlarged}, project.type.toLowerCase()]">
+	<div class="card" :class="['border-left', project.type.toLowerCase()]">
 		<h5><strong>{{ project.title }}</strong></h5>
 		<p v-if="project.shortDescription">{{ project.shortDescription }}</p>
 	</div>

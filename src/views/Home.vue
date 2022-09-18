@@ -3,6 +3,7 @@
     <div class="page">
       <div class="banner"><HomeBanner /></div>
       <div class="banner"><AboutBanner /></div>
+      <div class="banner"><ProjectBanner /></div>
       <!-- <div class="banner"><AspirationBanner /></div>
       <div class="banner"><TraitsBanner /></div>
       <div class="banner"><InterestsBanner /></div> -->
@@ -25,10 +26,11 @@ import AboutBanner from '../components/home/AboutBanner.vue';
 // import TraitsBanner from '../components/home/TraitsBanner';
 // import InterestsBanner from '../components/home/InterestsBanner';
 import Footer from '../components/Footer';
+import ProjectBanner from '../components/home/ProjectBanner.vue';
 
 export default {
   name: 'Home',
-  components: {HomeBanner, Footer, AboutBanner}
+  components: { HomeBanner, Footer, AboutBanner, ProjectBanner }
 }
 </script>
 
@@ -44,7 +46,7 @@ export default {
 }
 
 .banner {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .disclaimer {
