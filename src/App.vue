@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <div class="nav">
-      <h6><router-link to="/home">ABOUT</router-link></h6>
-      <h6><router-link to="/projects">PROJECTS</router-link></h6>
+      <router-link to="/home">
+        <img src="../public/images/logo_v2.png" />
+      </router-link>
+      <div class="nav-links">
+        <h6><router-link to="/home">ABOUT</router-link></h6>
+        <h6><router-link to="/projects">PROJECTS</router-link></h6>
+      </div>
       <!--<p>Achievements</p>-->
       <!--<p>Contact</p>-->
     </div>
@@ -49,6 +54,10 @@ export default {
     --black: #050203;
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   header, h2, h3, h4, h5, h6 {
     font-family: Montserrat, sans-serif;
   }
@@ -61,7 +70,7 @@ export default {
     color: var(--black);
     overflow-x: hidden;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
   }
 
@@ -94,6 +103,10 @@ export default {
 	.justify {
 		text-align: justify;
 	}
+
+  .banner {
+    min-height: 100vh;
+  }
 
   @media only screen and (max-width: 576px) {
     h1, header {
@@ -144,7 +157,7 @@ export default {
 
 body {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow-x: hidden;
 }
@@ -167,8 +180,8 @@ body {
     width: 100%;
     margin-top: 2rem;
     display: flex;
-    justify-content: right;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
 
     a {
       color: var(--black);
@@ -181,6 +194,20 @@ body {
     .router-link-active {
       font-weight: bold;
     }
+
+    h6 {
+      margin: 0;
+    }
+
+    img {
+      width: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
 
@@ -188,18 +215,22 @@ body {
   height: 65px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) { 
   .nav {
-    & h6 {
-      padding-right: 1rem;
+    padding: 0 1rem;
+
+    .nav-links {
+      gap: 1rem;
     }
   }
 }
 
 @media only screen and (min-width: 576px) {
   .nav {
-    & h6 {
-      margin: 0 1rem;
+    padding: 0 1rem;
+
+    .nav-links {
+      gap: 1rem;
     }
   }
 }
@@ -210,9 +241,8 @@ body {
   .nav {
     padding: 0 10%;
 
-    & h6 {
-      margin-left: 2rem;
-      margin-right: 0;
+    .nav-links {
+      gap: 2rem;
     }
   }
 }

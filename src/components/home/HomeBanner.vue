@@ -1,22 +1,18 @@
 <template>
-	<div class="home-banner">
-		<div class="container-fluid d-flex align-items-center">
-			<div class="intro row align-items-center">
-				<div class="col-6">
-					<header class="right">Hello, I'm</header>
-				</div>
-				<div class="col-6 col-md-5">
-					<header class="left">
-						<span class="typed-text">{{ typeValue }}</span>
-						<span class="cursor" :class="{'typing': typeStatus}"></span>
-					</header>
-				</div>
-				<div class="col-12 col-md-1">
-					<p class="pause" v-if="!paused" @click="pauseTyping()"><i class="fas fa-pause"></i></p>
-					<p class="pause" v-if="paused" @click="resumeTyping()"><i class="fas fa-play"></i></p>
-				</div>
+	<div class="banner home-banner d-flex align-items-center">
+		<div class="container--full-width">
+			<div class="container--left">
+				<span class="text__intro text--right">Hello, I'm</span>
+			</div>
+			<div class="container--right">
+				<span class="text__intro text--left">
+				<span class="typed-text">{{ typeValue }}</span>
+				<span class="cursor" :class="{'typing': typeStatus}"></span>
+			</span>
 			</div>
 		</div>
+		<i class="fas fa-pause pause" v-if="!paused" @click="pauseTyping()"></i>
+		<i class="fas fa-play pause" v-if="paused" @click="resumeTyping()"></i>
 		<div class="about-me" v-scroll-to="'#about-banner'">
 			<i class="fas fa-angle-double-down"></i>
 		</div>
@@ -120,11 +116,61 @@
 
 	.home-banner {
 		width: 100%;
-		height: 100vh;
 		position: relative;
 
 		background-image: url('../../../public/images/blobs/main_blob.png');
 		background-repeat: no-repeat;
+
+		.container {
+			&--full-width {
+				width: 100%;
+				display: flex;
+				gap: 2rem;
+			}
+
+			&--left,&--right {
+				width: 50%;
+				display: flex;
+			}
+
+			&--left {
+				justify-content: right;
+			}
+
+			&--right {
+				justify-content: left;
+
+				& .cursor {
+					display: inline-block;
+					margin-left: 0.5rem;
+					width: 3px;
+					background-color: black;
+					animation: cursorBlink 1s infinite;
+				}
+
+				& .cursor.typing {
+					animation: none;
+				}
+			}
+		}
+
+		.text {
+			&__intro {
+				background-color: rgba(255, 255, 255, 0.5);
+				box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
+				padding: 0.1rem 0.5rem;
+				border-radius: 3px;
+				font-weight: bold;
+				font-family: Montserrat, sans-serif;
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		i.pause {
+			position: absolute;
+			right: 0;
+		}
 
 		.about-me {
 			position: absolute;
@@ -144,74 +190,14 @@
 				}
 			}
 
-			i {
-				font-size: 2rem;
-			}
-
 			p {
 				width: max-content;
 			}
 		}
 
-		.intro {
-			margin-left: 0px;
-			width: 100%;
-			box-sizing: border-box;
-
-			& header {
-				padding: 0 1rem;
-				display: inline-block;
-
-				&.right {
-					float: right;
-				}
-
-				&.left {
-					float: left;
-				}
-
-				& .cursor {
-					display: inline-block;
-					margin-left: 0.5rem;
-					width: 2px;
-					background-color: black;
-					animation: cursorBlink 1s infinite;
-				}
-
-				& .cursor.typing {
-					animation: none;
-				}
-
-			}
-
-			& .text-align-right {
-				text-align: right;
-			}
-
-			& .text-align-left {
-				text-align: left;
-			}
-
-			.pause {
-				margin-bottom: 0;
-				background: none;
-				box-shadow: none;
-				width: 100%;
-				text-align: center;
-			}
+		i {
+			font-size: 1.5rem;
 		}
-	}
-
-	.container-fluid {
-		width: 100%;
-		height: 100%;
-	}
-
-	header {
-		background-color: rgba(255, 255, 255, 0.5);
-		box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.3);
-		padding: 0.1rem 0.5rem;
-		border-radius: 3px;
 	}
 
 	@media only screen and (max-width: 576px) {
@@ -219,15 +205,21 @@
 			background-position-y: 50%;
 			background-position-x: 50%;
 			background-size: cover;
+			padding: 0 1rem;
+
+			.text__intro {
+				font-size: 1.5rem;
+				padding: 0 0.5rem;
+			}
 		}
 
 		.cursor {
 			height: 1.25rem;
+			width: 2px;
 		}
 
-		.pause {
-			margin-top: 1.5rem;
-			font-size: 1rem;
+		i.pause {
+			margin-right: 1rem;
 		}
 	}
 	@media only screen and (min-width: 576px) {
@@ -235,15 +227,20 @@
 			background-position-y: 50%;
 			background-position-x: 50%;
 			background-size: cover;
+
+			.text__intro {
+				font-size: 2rem;
+				padding: 0 0.5rem;
+			}
 		}
 
 		.cursor {
-			height: 1.9rem;
+			height: 1.75rem;
+			width: 2px;
 		}
 
-		.pause {
-			margin-top: 2rem;
-			font-size: 1.5rem;
+		i.pause {
+			margin-right: 1rem;
 		}
 	}
 	@media only screen and (min-width: 768px) {
@@ -251,6 +248,11 @@
 			background-position-x: 20%;
 			background-position-y: 50%;
 			background-size: 90%;
+
+			.text__intro {
+				font-size: 2.5rem;
+				padding: 0 0.75rem;
+			}
 		}
 
 		.cursor {
@@ -264,10 +266,18 @@
 	@media only screen and (min-width: 992px) {
 		.home-banner {
 			background-size: 80%;
+			.text__intro {
+				font-size: 2.75rem;
+				padding: 0 1rem;
+			}
 		}
 
 		.cursor {
 			height: 2.5rem;
+		}
+
+		i.pause {
+			margin-right: 0;
 		}
 	}
 	@media only screen and (min-width: 1200px){

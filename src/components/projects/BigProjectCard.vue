@@ -14,6 +14,9 @@
 					<p v-for="(alinea, index) in project.longDescription" v-bind:key="index">{{ alinea }}</p>
 				</div>
 				<div class="my-5 btn-container">
+					<a v-if="project.report" class="btn btn-link report" :href="project.report" target="_blank" title="Link to report">
+						<i class="fa-solid fa-book"></i>
+					</a>
 					<a v-if="project.url" class="btn btn-link website" :href="project.url" target="_blank" title="Link to website">
 						<i class="fa-solid fa-globe"></i>
 					</a>
@@ -81,6 +84,10 @@
 
 				&.code {
 					box-shadow: -4px 0px 8px 0 rgba(127, 71, 255, 0.8), 4px 0px 8px 0 rgba(255, 243, 84, 0.8);
+				}
+
+				&.report {
+					box-shadow: -4px 0px 8px 0 rgba(255, 243, 84, 0.8), 4px 0px 8px 0 rgba(255, 59, 139, 0.8);
 				}
 			}
 		}

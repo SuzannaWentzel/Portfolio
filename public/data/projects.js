@@ -13,48 +13,57 @@ const allProjects = [
     //     date: '',
     //     tags: []
     // },
-    // {
-    //     slug: 'ovo',
-    //     title: 'Motivating students',
-    //     type: 'University project',
-    //     imgs: [],
-    //     videos: [],
-    //     shortDescription: 'Research on how to motivate high school students',
-    //     longDescription: [],
-    //     repository: '',
-    //     url: '',
-    //     report: '',
-    //     date: '',
-    //     tags: []
-    // },
-    // {
-    //     slug: 'furhat',
-    //     title: 'Persuasion bot',
-    //     type: 'University project',
-    //     imgs: [],
-    //     videos: [],
-    //     shortDescription: 'Conversational Agent that tries to change your opinion',
-    //     longDescription: [],
-    //     repository: '',
-    //     url: '',
-    //     report: '',
-    //     date: '',
-    //     tags: []
-    // },
-    // {
-    //     slug: 'audio-story',
-    //     title: 'The Mysterious Pond',
-    //     type: 'University project',
-    //     imgs: [],
-    //     videos: [],
-    //     shortDescription: 'Audio Story',
-    //     longDescription: [],
-    //     repository: '',
-    //     url: 'https://audiomack.com/storytelling-through-sound/song/suzanna-the-mysterious-pond',
-    //     report: '',
-    //     date: '',
-    //     tags: []
-    // },
+    {
+        slug: 'ovo',
+        title: 'Motivating students',
+        type: 'University project',
+        imgs: ['OvO-motivatie.png'],
+        videos: [],
+        shortDescription: 'Research on how to motivate high school students',
+        longDescription: ['To finish my educational master, I had to conduct a practical research (\'Onderzoek van ' +
+            'Onderwijs\'). At the time, I was teaching at a school, so the research was conducted there. I was ' +
+            'experiencing some problems with motivating students to do their work in my class and to do their ' +
+            'homework, so I wanted to learn what things I could do to improve.',
+            'I performed a literature study, interviewed teachers, surveyed students and created a list of ' +
+            'guidelines to motivate students. Then, I tried some of them out in class, and evaluated this with ' + 
+            'students and teachers. I found that some of the guidelines already worked, some needed some other ' +
+            'implementation in class.',
+            'It was a fun research to perform and the results and learnings were directly applicable in the lessons I gave.'
+        ],
+        repository: '',
+        url: '',
+        report: 'https://purl.utwente.nl/essays/92505',
+        date: '14/08/2022',
+        tags: ['Research', 'Teaching']
+    },
+    {
+        slug: 'furhat',
+        title: 'Persuasion bot',
+        type: 'University project',
+        imgs: ['conversational-agent.png'],
+        videos: [],
+        shortDescription: 'Conversational Agent that tries to change your opinion',
+        longDescription: [],
+        repository: '',
+        url: '',
+        report: '',
+        date: '',
+        tags: []
+    },
+    {
+        slug: 'audio-story',
+        title: 'The Mysterious Pond',
+        type: 'University project',
+        imgs: ['storytelling-through-sound.png'],
+        videos: [],
+        shortDescription: 'Audio Story',
+        longDescription: [],
+        repository: '',
+        url: 'https://audiomack.com/storytelling-through-sound/song/suzanna-the-mysterious-pond',
+        report: '',
+        date: '',
+        tags: []
+    },
     // {
     //     slug: 'portfolio',
     //     title: 'Portfolio website',
@@ -117,7 +126,7 @@ const allProjects = [
         slug: 'story_generator',
         title: 'Story generator',
         type: 'University project',
-        imgs: [],
+        imgs: ['nlp-generated-stories.png'],
         videos: [],
         shortDescription: 'Generating new stories from existing books',
         longDescription: ['For the course \'Natural Language Processing\' we created a model that generates new stories '+
@@ -129,7 +138,7 @@ const allProjects = [
             'enough to be considered in the same style as the authors. However, they did present funny stories and even '+ 
             'though lots of improvements can be done, we learned a lot.'
         ],
-        repository: '',
+        repository: 'https://github.com/SuzannaWentzel/Story-generator',
         url: '',
         report: '',
         date: '',

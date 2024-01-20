@@ -1,21 +1,17 @@
 <template>
-	<div id="about-banner" class="container-fluid">
-		<div class="row card-container d-flex align-items-center mb-5">
-			<div class="col-12 card-sub-container">
-				<div class="card">
-					<div class="row d-flex card-content-container align-items-center">
-						<div class="col-12 col-md-6 img-container">
-							<img src="../../../public/images/suzanna.jpg"/>
-						</div>
-						<div class="col-12 col-md-6 justify">
-							<h2><strong>Suzanna Wentzel</strong></h2>
-							<h5>(Web) developer</h5>
-							<p class="mt-5">Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
-							<p>I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, sporting, going outside and playing board games.</p>
-							<p>What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
-							<!-- <button class="btn btn-primary mb-3">Send me a message</button> -->
-						</div>
-					</div>
+	<div id="about-banner" class="banner about-banner card-container">
+		<div class="card">
+			<div class="card-content-container">
+				<div class="img-container">
+					<img src="../../../public/images/me_topicus.jpeg"/>
+				</div>
+				<div class="text">
+					<h2><strong>Suzanna Wentzel</strong></h2>
+					<h5>(Web) developer</h5>
+					<p>Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
+					<p>I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, sporting, going outside and playing board games.</p>
+					<p>What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
+					<!-- <button class="btn btn-primary mb-3">Send me a message</button> -->
 				</div>
 			</div>
 		</div>
@@ -29,24 +25,24 @@
 </script>
 
 <style lang="scss" scoped>
-	#about-banner {
-		width: 100%;
-		min-height: 100vh;
-		position: relative;
-		overflow: hidden;
-	}
-
 	.card-container {
 		min-height: 100vh;
 		margin-right: 0;
 	}
 
 	.img-container {
+		background-image: url('../../../public/images/blobs/blob_2.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+
 		img {
-			border-radius: 0.25rem;
+			border-radius: 1.5rem;
 			width: 100%;
-			margin-bottom: 1rem;
-			box-shadow: 0 10px 30px -5px var(--lemon), 10px 0 30px -5px var(--orange), 0 -10px 30px -2px var(--magenta), -10px 0 30px 0 var(--cyan);
+			max-width: 250px;
+			// box-shadow: 0 10px 30px -5px var(--lemon), 10px 0 30px -5px var(--orange), 0 -10px 30px -2px var(--magenta), -10px 0 30px 0 var(--cyan);
 		}
 	}
 
@@ -54,67 +50,88 @@
 		height: 100%;
 	}
 
+	.card {
+		padding: 0;
+	}
+
 	@media only screen and (max-width: 576px) {
 		.img-container {
+			width: 100%;
+
 			img {
 				margin-top: 2rem;
 				margin-bottom: 3rem;
 			}
 		}
-		
-		p {
-			padding-right: 0;
+
+		.text {
+			padding: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.card {
+			box-shadow: none;
 		}
 	}
 
 	@media only screen and (min-width: 576px) {
-		.img-container {
-			img {
-				margin-top: 3rem;
-				margin-bottom: 5rem;
-			}
-		}
+		.about-banner {
+			display: flex;
+			align-items: center;
+			padding: 1rem;
 
-		p {
-			padding-right: 0;
+			.img-container {
+				padding: 2rem 1rem;
+			}
+
+			.text {
+				padding: 2rem 1rem 1rem 1rem;
+
+				p:first-of-type {
+					margin-top: 1rem;
+				}
+			}
 		}
 	}
 
-	@media only screen and (min-width: 768px) {
-		.card-sub-container {
-			height: 70%;
+	@media only screen and (min-width: 768px) { 
+		.card-content-container {
+			display: flex;
+			align-items: center;
+			.img-container {
+				width: 50%;
+				img {
+					width: 80%;
+				}
+			}
+			.text {
+				width: 50%;
+				padding: 2rem 1rem;
 
-			.card {
-				height: 100%;
+				p:last-of-type {
+					margin-bottom: 0;
+				}
+
+				p:first-of-type {
+					margin-top: 3rem;
+				}
 			}
 		}
 
-		.img-container{
-			padding: 2rem;
-		}
-
-		p {
-			padding-right: 1rem;
-		}
 	}
 
 	@media only screen and (min-width: 992px) {
-		.img-container {
-			padding: 3rem;
-		}
-
-		p {
-			padding-right: 2rem;
-		}
-	}
-
-	@media only screen and (min-width: 1200px){
-		.img-container {
-			padding: 5rem;
-		}
-
-		p {
-			padding-right: 4rem;
+		.card-container {
+			padding: 0;
+			.text {
+				padding: 2rem 3rem;
+			}
+			
+			img {
+				margin: 3rem 0;
+			}
 		}
 	}
+
+	@media only screen and (min-width: 1200px) {	}
 </style>

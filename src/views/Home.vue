@@ -1,15 +1,13 @@
 <template>
   <div class="home">
     <div class="page">
-      <div class="banner"><HomeBanner /></div>
-      <div class="banner"><AboutBanner /></div>
-      <div class="banner"><ProjectBanner /></div>
+      <HomeBanner />
+      <AboutBanner />
+      <ProjectBanner />
       <!-- <div class="banner"><AspirationBanner /></div>
       <div class="banner"><TraitsBanner /></div>
       <div class="banner"><InterestsBanner /></div> -->
-      <div class="disclaimer"><p>This is a work in progress, please don't mind the mess. Do you want to checkout the
-        <a href="https://norway.suzannawentzel.nl">blog</a> about my stay in Norway?</p>
-      </div>
+      <div class="disclaimer"><p>This is a work in progress, please don't mind the mess.</p></div>
     </div>
     
     
@@ -45,44 +43,30 @@ export default {
   /*text-shadow: 0 0 0.5rem #fff;*/
 }
 
-.banner {
-  min-height: 100vh;
-}
-
 .disclaimer {
   width: 100%;
   color: var(--black);
+  text-align: center;
+  padding: 0 1rem;
 
   & a {
     color: var(--purple);
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .disclaimer {
-    bottom: 0.5rem;
-    padding: 0.5rem 0.75rem;
+@media only screen and (max-width: 576px) { }
 
-  }
-}
-@media only screen and (min-width: 576px) {
-  .disclaimer {
-    padding: 0 2rem;
-  }
-}
+@media only screen and (min-width: 576px) { }
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) { }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) { 
   .disclaimer {
-    padding: 0 1rem;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .disclaimer {
+    padding: 0;
     text-align: right;
   }
 }
+
+@media only screen and (min-width: 1200px) { }
 
 </style>
