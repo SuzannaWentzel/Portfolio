@@ -181,6 +181,7 @@
 			width: 100%;
 			cursor: pointer;
 			bottom: 5%;
+			left: 0;
 
 			&:hover {
 				color: var(--dark);
