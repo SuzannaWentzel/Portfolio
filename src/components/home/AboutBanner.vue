@@ -9,7 +9,7 @@
 					<h2><strong>Suzanna Wentzel</strong></h2>
 					<h5>(Web) developer</h5>
 					<p>Hi, I'm Suzanna. This is my portfolio website showing what I do. If you like my work or if you have any questions, please don't hesitate to contact me.</p>
-					<p>I'm currently studying Interaction Technology and the educational master at University of Twente, and next to that I have a lot of passion for diy projects, baking, making music, gardening, sporting, going outside and playing board games.</p>
+					<p>I'm currently a full-stack software developer at Topicus (Education). Next to that I have a lot of passion for small programming projects, diy projects, baking, making music, gardening, sporting, going outside and playing board games.</p>
 					<p>What I love about development is overcoming challenges (it's like solving puzzles) and seeing the results immediately.</p>
 					<!-- <button class="btn btn-primary mb-3">Send me a message</button> -->
 				</div>

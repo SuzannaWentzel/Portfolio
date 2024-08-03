@@ -37,7 +37,7 @@
 			}
 		},
 		created() {
-			if (Object.keys(this.$route.params).length !== 0 && Object.keys(this.$route.params.projectSlug).length !== 0) {
+			if (Object.keys(this.$route.params).length !== 0 && !!this.$route.params.projectSlug) {
 				this.enlargeCard(this.$route.params.projectSlug);
 			}
 		},

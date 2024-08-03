@@ -15,16 +15,10 @@ const routes = [
     redirect: '/home'
   },
   {
-    path: '/projects/:projectSlug',
+    path: '/projects/:projectSlug?',
     name: 'Projects',
     component: () => import(/* webpackChunckName: "Project" */ '../views/Projects.vue')
-  },
-  {
-    path: '/projects',
-    name: 'Projects',
-    component: () => import(/* webpackChunckName: "Project" */ '../views/Projects.vue')
-  },
-  
+  },  
 ]
 
 const router = new VueRouter({
