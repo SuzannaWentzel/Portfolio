@@ -1,5 +1,5 @@
 <template>
-	<p><span class="copyright">©</span> Suzanna Wentzel, 2022</p>
+	<p><span class="copyright">©</span> Suzanna Wentzel, 2025</p>
 </template>
 
 <script>

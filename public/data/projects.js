@@ -172,7 +172,7 @@ const allProjects = [
         slug: 'weather_app',
         title: 'Huemidity',
         type: 'Personal project',
-        imgs: [],
+        imgs: ['splash.png'],
         videos: [],
         shortDescription: 'Android weather application',
         longDescription: ['In the summer of 2021, I wanted to start a fun project to practice my mobile application design and development skills. ' +
@@ -234,7 +234,7 @@ const allProjects = [
         slug: 'line_drawings',
         title: 'Line drawings',
         type: 'University project',
-        imgs: [],
+        imgs: ['iterated-flower.png'],
         videos: [],
         shortDescription: 'Mathematical artwork that makes mesmerizing drawings',
         longDescription: ['During the course Art, Mathematics and Technology, we had to make weekly centerpieces, each ' +
@@ -282,6 +282,7 @@ const allProjects = [
         imgs: [],
         videos: [],
         shortDescription: 'Bachelor design project: Curriculum Builder',
+        longDescription: ['For my Design Project (the final practical course of TCS), we formed a group of 4 students and built a Curriculum Builder (CurB). We did a full requirement analysis on which functionalities to include, and then built the application using frameworks such as Vue.js, Spring Boot and GraphQL.'],
         starred: false
     }, 
     {
@@ -324,7 +325,7 @@ const allProjects = [
         slug: 'norway_blog',
         title: 'Norway blog',
         type: 'Personal project',
-        imgs: [],
+        imgs: ['norway-blog.png'],
         videos: [],
         shortDescription: 'Blog about my exchange to Norway',
         longDescription: ['As part of my bachelor curriculum, I went abroad to Norway for half a year. There, I studied ' +
@@ -338,21 +339,21 @@ const allProjects = [
         tags: [],
         starred: false
     },
-    {
-        slug: 'shoes',
-        title: 'Shoes',
-        type: 'Creative project',
-        imgs: [],
-        videos: [],
-        shortDescription: '',
-        longDescription: '',
-        repository: '',
-        url: '',
-        report: '',
-        date: '',
-        tags: [],
-        starred: false
-    },
+    // {
+    //     slug: 'shoes',
+    //     title: 'Shoes',
+    //     type: 'Creative project',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: '',
+    //     longDescription: '',
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: [],
+    //     starred: false
+    // },
     {
         slug: 'fabric_art',
         title: 'FabricArt',
@@ -360,7 +361,7 @@ const allProjects = [
         imgs: [],
         videos: [],
         shortDescription: 'Hand drawn designs on cotton bags.',
-        longDescription: '',
+        longDescription: ['In the summer of 2015, I worked on setting up a small business with my sister. We drew our own colorful and happy designs on cotton totebags, to stimulate people to use them instead of plastic bags.', 'To start this business, we got help from The New Entrepreneur (de Zomerondernemer). Though we did not sell many bags, we learned a lot and it was a nice experience.'],
         repository: '',
         url: '',
         report: '',
