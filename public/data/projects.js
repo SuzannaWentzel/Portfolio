@@ -13,6 +13,82 @@ const allProjects = [
     //     date: '',
     //     tags: []
     // },
+    // {
+    //     slug: 'ten-beers-after',
+    //     title: 'Ten Beers After',
+    //     type: 'Personal project',
+    //     imgs: [],
+    //     videos: [],
+    //     shortDescription: 'Band website',
+    //     longDescription: [],
+    //     repository: '',
+    //     url: '',
+    //     report: '',
+    //     date: '',
+    //     tags: []
+    // },
+    {
+        slug: 'haptohuis-aalsmeer',
+        title: 'Haptohuis Aalsmeer',
+        type: 'Personal project',
+        imgs: [],
+        videos: [],
+        shortDescription: 'Website for a practice for haptotherapy',
+        longDescription: ['A new practice for haptotherapy was set up in Aalsmeer, and they needed an informational/' +
+            'promotional website. They delivered some ideas, texts and images, and I had the freedom to build a website ' +
+            'with that. It was built with plain HTML, CSS and a tiny bit of JavaScript, because it could be simple. I ' +
+            'deployed it using Netlify.',
+            'It was a lot of fun building this site and it was great communicating with the practitioners to create it ' +
+            'according to their wishes.'],
+        repository: '',
+        url: 'https://haptohuisaalsmeer.nl/',
+        report: '',
+        date: '12-05-2024',
+        tags: ['Website', 'UX']
+    },
+    {
+        slug: 'hapto-katelijn-berghoef',
+        title: 'Katelijn Berghoef Haptotherapie',
+        type: 'Personal project',
+        imgs: [],
+        videos: [],
+        shortDescription: 'Website for haptotherapy',
+        longDescription: ['Katelijn Berghoef started her own haptotherapy practice, and needed an informational/' +
+        'promotional website. I loved to help! She delivered the images and texts and explained her ideas, and I ' +
+        'transformed it into a website using WordPress. We chose to make it in WordPress, such that she could also ' +
+        'edit texts/pages when needed.',
+        'I started off with a default template, because it really fitted the vibe and colors of the ' +
+        'pictures, but I played around with and edited some components and made it more responsive.'],
+        repository: '',
+        url: 'https://katelijnberghoef.nl/',
+        report: '',
+        date: '',
+        tags: ['Website', 'UX']
+    },
+    {
+        slug: 'itech-thesis',
+        title: 'I-Tech Thesis',
+        type: 'University project',
+        imgs: ['itech-thesis-charts.png'],
+        videos: [],
+        shortDescription: 'Linguistic alignment and sentiment',
+        longDescription: [`For my master thesis, I investigated the relationship between linguistic alignment and sentiment 
+            in online discussions. Linguistic alignment is the phenomena where people converge on their language use 
+            when they communicate. This can happen in various levels of language. I investigated specifically the 
+            lexical alignment: alignment on word use. To measure lexical alignment over time, I proposed a new measure: 
+            the time-based overlap.`,
+            `With this measure, I calculated alignment over time, and clustered these time series in groups of 
+            similar alignment. I did the same for sentiment over time, and then searched for association between the 
+            alignment clusters and the sentiment clusters. I also included discussion length and topic. Though I did not
+            find clear associations between sentiment and alignment, some was found with the topic.`,
+            `Working on the thesis was at the same time challenging and exciting, because I had a lot of freedom in what 
+            I could do. I enjoyed being critical and trying to fit the puzzle pieces of existing research together.`],
+        repository: '',
+        url: '',
+        report: 'https://purl.utwente.nl/essays/97481',
+        date: '',
+        tags: ['Research', 'Thesis', 'Language', 'NLP']
+    },
     {
         slug: 'ovo',
         title: 'Motivating students',
@@ -34,7 +110,7 @@ const allProjects = [
         url: '',
         report: 'https://purl.utwente.nl/essays/92505',
         date: '14/08/2022',
-        tags: ['Research', 'Teaching']
+        tags: ['Research', 'Thesis', 'Teaching']
     },
     {
         slug: 'furhat',
@@ -42,13 +118,18 @@ const allProjects = [
         type: 'University project',
         imgs: ['conversational-agent.png'],
         videos: [],
-        shortDescription: 'Conversational Agent that tries to change your opinion',
-        longDescription: [],
+        shortDescription: 'Conversational agent that tries to change your opinion',
+        longDescription: ['With the course \'Conversational Agents\', we worked with the Furhat system. It is a ' +
+            'conversational agent that can be programmed with natural language understanding, responses and facial expressions. ' +
+            'We attempted to make the Furhat respond such that it could push the user to form a little more extreme opinions, ' +
+            'in our case specifically about eating meat, to investigate how much such systems can influence users.',
+            'We finished the interaction, but did not find that it could really push the users opinions. It was really ' +
+            'interesting to think about an interaction in such detail.'],
         repository: '',
         url: '',
         report: '',
         date: '',
-        tags: []
+        tags: ['Assignment', 'Robot']
     },
     {
         slug: 'audio-story',
@@ -56,13 +137,18 @@ const allProjects = [
         type: 'University project',
         imgs: ['storytelling-through-sound.png'],
         videos: [],
-        shortDescription: 'Audio Story',
-        longDescription: [],
+        shortDescription: 'Audio story from storytelling',
+        longDescription: ['During the course \'Storytelling through Sound\', we learned all the ins-and-outs of how to ' +
+        'create an immersive audio story, including the use of music, recording sound effects, recording and directing ' +
+        'voice actors, and combining it all in a digital audio workstation (Reaper) including sound processing. ',
+        'It was a great project, where I for example threw bell peppers into a filled sink for creating SFX (I had to ' +
+        'mop afterwards), tricked my cat in making the sounds I wanted to get, spent a lot of time in nature in search ' +
+        'for the perfect sounds, and had a lot of fun recording with the voice actors.'],
         repository: '',
         url: 'https://audiomack.com/storytelling-through-sound/song/suzanna-the-mysterious-pond',
         report: '',
         date: '',
-        tags: []
+        tags: ['Story', 'Music']
     },
     // {
     //     slug: 'portfolio',
@@ -92,20 +178,22 @@ const allProjects = [
     //     date: '',
     //     tags: []
     // },
-    // {
-    //     slug: 'tea_box',
-    //     title: 'Happy tea box',
-    //     type: 'Creative project',
-    //     imgs: [],
-    //     videos: [],
-    //     shortDescription: '',
-    //     longDescription: [],
-    //     repository: '',
-    //     url: '',
-    //     report: '',
-    //     date: '',
-    //     tags: []
-    // },
+    {
+        slug: 'tea_box',
+        title: 'Happy tea box',
+        type: 'Creative project',
+        imgs: ['tea-box.jpg'],
+        videos: [],
+        shortDescription: 'Hand-painted wooden tea box',
+        longDescription: ['We needed a new tea box and did not want a boring one, so I drew some designs and hand-painted ' +
+        'it in a lot of colors. You cannot see it on the picture, but the inside is painted with some galaxies. ' +
+        'It turned out quite cheerful, and I get happy everytime I see it.'],
+        repository: '',
+        url: '',
+        report: '',
+        date: '',
+        tags: ['Craft', 'Creative']
+    },
     // {
     //     slug: 'fairy_tales',
     //     title: 'Fairy tale generator',
@@ -142,7 +230,7 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: [],
+        tags: ['NLP', 'Story'],
         starred: true,
     },
     {
@@ -256,8 +344,14 @@ const allProjects = [
         type: 'University project',
         imgs: ['tinkering.jpg'],
         videos: [],
-        shortDescription: '',
-        longDescription: [],
+        shortDescription: 'Recording tinkering activities and supporting tinkering',
+        longDescription: ['In the course \'Mastering Tinkering \', we learned a lot about tinkering. We learned theory, ' +
+        'practiced tinkering ourselves, and eventually learned how to support others in tinkering. In a group, we ' +
+        'set up a tinkering experience.',
+        'The course really changed my mindset: it is fun to get in the flow of tinkering with ideas and stuff you have ' +
+        'around. It helps in getting new ideas, thinking out of the box and not being afraid to make mistakes or to ' +
+        'ruin something.'],
+        tags: ['Creative'],
         starred: false
     },
     {
@@ -267,22 +361,24 @@ const allProjects = [
         imgs: ['once-upon-a-slide.png'],
         videos: [],
         shortDescription: 'Slide builder, Application Development Norway',
-        longDescription: ['During my exchange at UiA (Universitetet i Agder, Norway), I followed the course \'Application '+ 
+        longDescription: ['During my exchange at UiA (Universitetet i Agder, Norway), I followed the course \'Application '+
             'Development\'. In this course, we created our first full-stack web application: an application that allows to create '+
-            'slides for presentations, called Once Upon a Slide. Although it contains quite some bugs, it was a lot of ' + 
-            'fun to work on this, especially in this nice team of students from different countries.', 'We created it '+ 
+            'slides for presentations, called Once Upon a Slide. Although it contains quite some bugs, it was a lot of ' +
+            'fun to work on this, especially in this nice team of students from different countries.', 'We created it '+
             'from scratch, from pure HTML, CSS & JavaScript. It was deployed using Heroku.'],
         url: 'https://once-upon-a-slide.herokuapp.com/',
+        tags: ['Website'],
         starred: false
     },
     {
         slug: 'curb',
         title: 'Curb',
         type: 'University project',
-        imgs: [],
+        imgs: ['curb.png'],
         videos: [],
         shortDescription: 'Bachelor design project: Curriculum Builder',
         longDescription: ['For my Design Project (the final practical course of TCS), we formed a group of 4 students and built a Curriculum Builder (CurB). We did a full requirement analysis on which functionalities to include, and then built the application using frameworks such as Vue.js, Spring Boot and GraphQL.'],
+        tags: ['Website'],
         starred: false
     }, 
     {
@@ -300,7 +396,7 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: ['WIP'],
+        tags: ['WIP', 'Application'],
         starred: false
     },
     {
@@ -318,7 +414,7 @@ const allProjects = [
         url: '',
         report: '',
         date: '',
-        tags: ['WIP'],
+        tags: ['Website', 'WIP'],
         starred: false
     },
     {
@@ -336,7 +432,7 @@ const allProjects = [
         url: 'https://norway.suzannawentzel.nl/',
         report: '',
         date: '',
-        tags: [],
+        tags: ['Website', 'Travel'],
         starred: false
     },
     // {
@@ -358,15 +454,15 @@ const allProjects = [
         slug: 'fabric_art',
         title: 'FabricArt',
         type: 'Creative project',
-        imgs: [],
+        imgs: ['fabric-art.jpg'],
         videos: [],
-        shortDescription: 'Hand drawn designs on cotton bags.',
+        shortDescription: 'Hand drawn designs on cotton bags',
         longDescription: ['In the summer of 2015, I worked on setting up a small business with my sister. We drew our own colorful and happy designs on cotton totebags, to stimulate people to use them instead of plastic bags.', 'To start this business, we got help from The New Entrepreneur (de Zomerondernemer). Though we did not sell many bags, we learned a lot and it was a nice experience.'],
         repository: '',
         url: '',
         report: '',
         date: '',
-        tags: [],
+        tags: ['Creative', 'Business'],
         starred: false
     },
 ]
