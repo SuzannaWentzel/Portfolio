@@ -44,7 +44,8 @@ const allProjects = [
         url: 'https://haptohuisaalsmeer.nl/',
         report: '',
         date: '12-05-2024',
-        tags: ['Website', 'UX']
+        tags: ['Website', 'UX'],
+        starred: true,
     },
     {
         slug: 'hapto-katelijn-berghoef',
@@ -274,7 +275,7 @@ const allProjects = [
         report: '',
         date: '',
         tags: ['Application', 'UX', 'Creative'],
-        starred: true
+        starred: false
     },
     {
         slug: 'plastic_soup',
