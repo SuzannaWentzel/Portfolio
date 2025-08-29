@@ -25,8 +25,8 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-12 col-md-6">
-				<img v-if="project.imgs[0]" :src="'../../../images/project_images/' + project.imgs[0]" class="mt-4 px-4">
+			<div class="col-12 col-md-6 center-horizontal">
+				<img v-if="project.imgs[0]" :src="'../../../images/project_images/' + project.imgs[0]" class="mt-4 mb-4">
 				<!-- TODO: ADD IMAGE/VIDEO HERE -->
 			</div>
 		</div>
@@ -111,7 +111,11 @@
 		}
 
 		img {
-			width: 100%;
+      height: min-content;
+      max-height: 500px;
+      max-width: 100%;
+      display: block;
+      object-fit: contain;
 		}
 	}
 

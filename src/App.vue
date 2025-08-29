@@ -104,6 +104,11 @@ export default {
 		text-align: justify;
 	}
 
+  .center-horizontal {
+    display: flex;
+    justify-content: center;
+  }
+
   .banner {
     min-height: 100vh;
   }
